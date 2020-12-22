@@ -1,0 +1,306 @@
+//**^^ Home page content Start ^^**//
+
+// Section - Showcase
+#showcase {
+  margin-top: 8.5rem;
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../img/products/Acer_Predator_21X-2.JPG);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .showcase {
+    height: 100%;
+    color: color(secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadein 1s ease-in forwards;
+
+    &__title {
+      font-size: 5rem;
+      text-transform: capitalize;
+    }
+
+    &__text {
+      padding: 0.5rem 0;
+      font-size: 2.5rem;
+      text-transform: capitalize;
+
+      &--sub {
+        .showcase__price {
+          font-size: 4rem;
+          color: color(primary);
+        }
+      }
+    }
+
+    .btn {
+      align-self: flex-start;
+      @extend %btn;
+
+      &:hover {
+        @extend %btn_hover;
+      }
+    }
+  }
+}
+
+// Section - Cards
+#cards {
+  padding: 5rem 0;
+  overflow: hidden;
+  border-bottom: 0.5px solid color(border);
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 300px);
+    grid-column-gap: 5rem;
+
+    .card {
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border: 0.25rem solid color(secondary);
+      transition: all 1s ease;
+
+      &__title {
+        font-size: 2.5rem;
+        color: color(primary);
+        text-transform: capitalize;
+      }
+
+      &__text {
+        font-size: 2rem;
+        color: color(secondary);
+        text-transform: capitalize;
+      }
+
+      &--1 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/laps/bg_1.png) center no-repeat;
+        background-size: cover;
+        //**Bring back via JS**//
+        opacity: 0;
+        // transform: translateX(-125%) translateY(0);
+      }
+      &--2 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/laps/bg_18.jpg) center no-repeat;
+        background-size: cover;
+        //**Bring back via JS**//
+        opacity: 0;
+        // transform: translateX(0) translateY(-125%);
+      }
+      &--3 {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(../img/laps/bg_5.jpg) center no-repeat;
+        background-size: cover;
+        //**Bring back via JS**//
+        opacity: 0;
+        // transform: translateX(125%) translateY(0);
+      }
+
+      &:hover {
+        transform: scale(1.05) !important;
+      }
+    }
+  }
+}
+
+// Section - Collection
+#collection {
+  opacity: 0;
+  padding: 7.5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../img/laps/bg_12.jpg) no-repeat center center/cover;
+  border-bottom: 0.5px solid color(border);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  .collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      @extend %title;
+    }
+
+    &__text {
+      @extend %text;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      @extend %btn;
+
+      &:hover {
+        @extend %btn_hover;
+      }
+    }
+
+    &__notification {
+      padding: 0.75rem 0;
+      font-size: 3rem;
+      text-transform: capitalize;
+      color: color(primary);
+    }
+  }
+}
+
+// Section - Arrivals
+#arrival {
+  .arrival {
+    display: flex;
+    min-height: 50vh;
+
+    &__item {
+      padding: 7.5rem 5%;
+      // padding-left: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transition: all 1s ease;
+
+      &__title {
+        color: color(primary);
+        font-size: 3.5rem;
+        text-transform: capitalize;
+      }
+      &__text {
+        @extend %text;
+      }
+
+      .btn {
+        margin-top: 2rem;
+        @extend %btn;
+
+        &:hover {
+          @extend %btn_hover;
+        }
+      }
+
+      &--1 {
+        flex: 1;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+          url(../img/laps/bg_2.jpg) no-repeat center center/cover;
+        //transform: translateX(-100%) translateY(0);
+        opacity: 0;
+
+        &:hover {
+          flex: 2;
+        }
+      }
+      &--2 {
+        flex: 1;
+        background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+          url(../img/products/Acer_Predator_21X-3.JPG) no-repeat center
+            center/cover;
+        //transform: translateX(100%) translateY(0);
+        opacity: 0;
+
+        &:hover {
+          flex: 2;
+        }
+      }
+    }
+  }
+}
+
+// Section - Promo
+#promo {
+  height: 50vh;
+  position: relative;
+
+  .promo__content {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .promo__title {
+      @extend %title;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      @extend %btn;
+
+      &:hover {
+        @extend %btn_hover;
+      }
+    }
+  }
+
+  .promo__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .promo__video-wrapper {
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: inherit;
+    }
+  }
+}
+
+// Section links
+#links {
+  padding: 5rem 0;
+
+  .links {
+    color: color(secondary);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 2rem;
+    line-height: 2.5;
+
+    h3 {
+      padding-bottom: 1rem;
+      font-size: 2rem;
+    }
+    li {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+
+      a {
+        color: color(secondaryOverlay);
+        transition: all 0.5s ease-in;
+
+        &:hover {
+          color: color(primary);
+        }
+
+        i {
+          padding: 1rem;
+          color: color(primary);
+          background: color(secondary);
+          border-radius: 50%;
+          font-size: 2rem;
+          margin: 0.5rem 0.5rem 0 0;
+        }
+      }
+    }
+  }
+}
+
+//**^^ Home page content End ^^**//

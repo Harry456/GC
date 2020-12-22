@@ -1,0 +1,46 @@
+.menu-overlay--on {
+  animation: overlayOn 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.menu-overlay--off {
+  animation: overlayOff 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@keyframes overlayOn {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes overlayOff {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.slideIn {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) !important;
+}
+
+.fadeIn {
+  animation: fadein 1.5s ease-in forwards !important;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,355 @@
+@mixin XS {
+  header {
+    .navigation {
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .brand {
+        i {
+          font-size: 2.5rem;
+        }
+
+        &__name {
+          margin-right: 1rem;
+        }
+      }
+
+      .user-info {
+        &__wrapper {
+          padding: 0.75rem 1rem;
+
+          &__cart__count {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background-color: color(primary);
+            border-radius: 50%;
+          }
+        }
+        a {
+          i {
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Navbar
+  #navbar {
+    width: 35rem;
+  }
+
+  // showcase
+  #showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(../img/products/Acer_Predator_21X-3.JPG) no-repeat center center/cover;
+
+    .showcase {
+      &__title {
+        font-size: 3.5rem;
+      }
+      &__text {
+        font-size: 1.5rem;
+
+        &--sub {
+          .showcase__price {
+            font-size: 2.5rem;
+            color: color(primary);
+          }
+        }
+      }
+    }
+  }
+
+  // Section - Cards
+  #cards {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 200px);
+      grid-row-gap: 2.5rem;
+    }
+  }
+
+  // Section - Collection
+  #collection {
+    .collection {
+      &__title {
+        @include title(0.25rem, 0, 2.5rem);
+      }
+      &__text {
+        @include text(0.5rem, 0, 1.5rem);
+        text-align: center;
+      }
+    }
+  }
+
+  //Section - New Arrivals
+  #arrival {
+    .arrival {
+      flex-direction: column;
+      &__item {
+        padding-right: 10%;
+        &__text {
+          font-size: 1.5rem;
+        }
+        &--2 {
+          background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+            url(../img/products/Acer_Predator_21X-2.JPG) no-repeat center
+              center/cover;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  // Section - Promo Video
+  #promo {
+    .promo__content {
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      transform: translate(0, -50%);
+      text-align: center;
+      .promo__title {
+        @include title(0.5rem, 0, 2.5rem);
+      }
+    }
+  }
+
+  // Section - Links
+  #links {
+    .links {
+      grid-template-columns: repeat(1, 1fr);
+      line-height: 2;
+
+      ul:not(:nth-child(4)) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  // Section - Footer
+  footer {
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@mixin SM {
+  // Navbar {
+  #navbar {
+    width: 35rem;
+  }
+
+  // showcase
+  #showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(../img/products/Acer_Predator_21X-3.JPG) no-repeat center center/cover;
+
+    .showcase {
+      &__title {
+        font-size: 4rem;
+      }
+      &__text {
+        font-size: 1.75rem;
+
+        &--sub {
+          .showcase__price {
+            font-size: 2.5rem;
+            color: color(primary);
+          }
+        }
+      }
+    }
+  }
+
+  // Section - Cards
+  #cards {
+    .cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(3, 250px);
+      grid-row-gap: 2.5rem;
+    }
+  }
+
+  // Section - Collection
+  #collection {
+    .collection {
+      &__title {
+        @include title(0.25rem, 0, 3rem);
+      }
+      &__text {
+        @include text(0.5rem, 0, 1.75rem);
+        text-align: center;
+      }
+    }
+  }
+
+  //Section - New Arrivals
+  #arrival {
+    .arrival {
+      flex-direction: column;
+      &__item {
+        padding-right: 10%;
+        &__text {
+          font-size: 2rem;
+        }
+        &--2 {
+          background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+            url(../img/products/Acer_Predator_21X-2.JPG) no-repeat center
+              center/cover;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  // Section - Promo Video
+  #promo {
+    .promo__content {
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      transform: translate(0, -50%);
+      .promo__title {
+        @include title(0.5rem, 0, 2.5rem);
+      }
+    }
+  }
+
+  // Section - Links
+  #links {
+    .links {
+      grid-template-columns: repeat(2, 1fr);
+      line-height: 2;
+
+      ul:not(:nth-child(4)) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+@mixin MD {
+  // Navbar {
+  #navbar {
+    width: 35rem;
+  }
+
+  // showcase
+  #showcase {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(../img/products/Acer_Predator_21X-3.JPG) no-repeat center center/cover;
+
+    .showcase {
+      &__title {
+        font-size: 4.25rem;
+      }
+      &__text {
+        font-size: 2rem;
+
+        &--sub {
+          .showcase__price {
+            font-size: 3rem;
+            color: color(primary);
+          }
+        }
+      }
+    }
+  }
+
+  // Section - Cards
+  #cards {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 350px);
+      grid-row-gap: 5rem;
+      grid-template-areas:
+        'card-1 card-2'
+        'card-3 card-3';
+
+      .card {
+        &--1 {
+          grid-area: card-1;
+        }
+        &--2 {
+          grid-area: card-2;
+        }
+        &--3 {
+          grid-area: card-3;
+        }
+      }
+    }
+  }
+
+  // Section - Collection - No Changes
+
+  //Section - New Arrivals
+  #arrival {
+    .arrival {
+      flex-direction: column;
+      &__item {
+        padding-right: 10%;
+        &__text {
+          font-size: 2rem;
+        }
+        &--2 {
+          background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+            url(../img/products/Acer_Predator_21X-2.JPG) no-repeat center
+              center/cover;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+
+  // Section - Promo Video
+  #promo {
+    .promo__content {
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      transform: translate(0, -50%);
+      .promo__title {
+        @include title(0.5rem, 0, 3.5rem);
+      }
+    }
+  }
+
+  // Section - Links
+  #links {
+    .links {
+      grid-column-gap: 1.5rem;
+    }
+  }
+}
+
+@mixin LG {
+  // Navbar {
+  #navbar {
+    width: 35rem;
+  }
+
+  // Section - Promo Video
+  #promo {
+    .promo__content {
+      top: 50%;
+      left: 10%;
+      right: 10%;
+      transform: translate(0, -50%);
+      .promo__title {
+        @include title(0.5rem, 0, 3.5rem);
+      }
+    }
+  }
+
+  // Section - Links
+  #links {
+    .links {
+      grid-column-gap: 2.25rem;
+    }
+  }
+
+  //**No Changes for rest of the section **//
+}
