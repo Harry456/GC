@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./scss/main.scss">
+	<script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin="anonymous"></script>
+	<title>Products</title>
+</head>
+
+<body>
+	<!-- Section - Nav -->
+	<nav id="navbar">
+		<div class="main-nav">
+
+			<div class="nav-logo">
+				<div class="brand">
+					<i class="fab fa-d-and-d fa-2x"></i>
+					<span class="brand__name">Gaming Cosmos</span>
+				</div>
+				<div class="menu-close">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+
+
+			<ul class="navbar">
+				<li class="nav-item">
+					<a href="./index.html" class="nav-link">home</a>
+				</li>
+				<li class="nav-item nav-item--active">
+					<a href="#" class="nav-link">products</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">about</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">contact</a>
+				</li>
+				<!-- Show Only if logged In -->
+				<li class="nav-item">
+					<a href="#" class="nav-link">profile</a>
+				</li>
+				<!-- Show only if user is admin -->
+				<li class="nav-item">
+					<a href="#" class="nav-link">admin</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link">logout</a>
+				</li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<div class="menu-overlay"></div>
+	<!-- <div class="menu-overlay menu-overlay--on menu-overlay--off"></div> -->
+
+	<!-- Section - Header -->
+	<header id="header">
+		<div class="navigation container">
+
+			<div class="menu-btn">
+				<i class="fas fa-bars fa-2x"></i>
+			</div>
+			<div class="brand">
+				<i class="fab fa-d-and-d fa-2x"></i>
+				<span class="brand__name">Gaming Cosmos</span>
+			</div>
+
+			<div class="user-info">
+
+				<div class="user-info__wrapper user-info__wrapper--cart">
+					<p class="user-info__wrapper__cart__count">0</p>
+					<a href="#">
+						<i class="fas fa-cart-plus fa-2x"></i>
+						<!-- <span>Cart</span> -->
+					</a>
+				</div>
+
+				<div class="user-info__wrapper user-info__signin">
+					<!-- Show if Logged IN -->
+					<!-- <a href="#" class="">
+											<i class="fas fa-user fa-2x"></i>
+											<span>UserName</span>
+										</a> -->
+					<a href="#">
+						<i class="fas fa-user fa-2x"></i>
+						<span>Sign In</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+
+	<!-- Section - Products -->
+	<section id="products">
+		<h1 class="container">Products</h1>
+
+		<div class="products-wrapper container">
+
+			<!-- Left Side -->
+			<form class="filter">
+				<div class="filter__item">
+					<select name="page" id="" class="page">
+						<option value="1">Page 1</option>
+						<option value="2">Page 2</option>
+						<option value="3">Page 3</option>
+					</select>
+				</div>
+
+				<div class="mob-grid">
+					<!-- First Filter - Price -->
+					<div class="filter__item filter__item--radio">
+						<div class="filter__item-heading">
+							<h2>Price</h2>
+							<i data-minus="minimize" class="fas fa-minus"></i>
+						</div>
+						<div class="filter__item-body">
+							<div class="form-group">
+								<input class="form-control" type="radio" name="price" id="lte" value="100000">
+								<span><i class="fas fa-circle"></i></span>
+								<label for="lte">
+									Below - <i class="fas fa-rupee-sign"></i>
+									100,000
+								</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="price" id="gte_1" value="100000">
+								<span><i class="fas fa-circle"></i></span>
+								<label for="gte_1">Above - <i class="fas fa-rupee-sign"></i>
+									100,000</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="price" id="gte_2" value="200000">
+								<span><i class="fas fa-circle"></i></span>
+								<label for="gte_2">Above - <i class="fas fa-rupee-sign"></i>
+									200,000</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="price" id="gte_3" value="300000">
+								<span><i class="fas fa-circle"></i></span>
+								<label for="gte_3">
+									Over - <i class="fas fa-rupee-sign"></i>
+									300,000</label>
+							</div>
+						</div>
+					</div>
+					<!-- Second Filter - Brand -->
+					<div class="filter__item filter__item--checkbox">
+						<div class="filter__item-heading">
+							<h2>Brand</h2>
+							<i data-minus="minimize" class="fas fa-minus"></i>
+						</div>
+						<div data-filter class="filter__item-body">
+							<div class="form-group">
+								<input class="form-control" type="checkbox" name="brand" id="msi" value="msi">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="msi">
+									MSI
+								</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="checkbox" name="brand" id="hp" value="hp">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="hp">HP</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="checkbox" name="brand" id="asus" value="asus">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="asus">Asus</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="checkbox" name="brand" id="acer" value="acer">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="acer">
+									Acer</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="checkbox" name="brand" id="razer" value="razer">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="razer">
+									Razer</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- Third Filter - Rating -->
+					<div class="filter__item filter__item--rating">
+						<div class="filter__item-heading">
+							<h2>Rating</h2>
+							<i data-minus="minimize" class="fas fa-minus"></i>
+						</div>
+						<div class="filter__item-body">
+							<div class="form-group">
+								<input class="form-control" type="radio" name="ratingsAverage" id="4.5" value="4.5">
+								<label for="4.5">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star-half-alt"></i>
+									& up
+								</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="ratingsAverage" id="4.0" value="4.0">
+								<label for="4.0">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									& up</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="ratingsAverage" id="3.0" value="3.0">
+								<label for="3.0">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i> & up
+								</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="ratingsAverage" id="2.0" value="2.0">
+								<label for="2.0">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i> & up </label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="ratingsAverage" id="1.0" value="1.0">
+								<label for="1.0">
+									<i class="fas fa-star"></i> & up</label>
+							</div>
+						</div>
+					</div>
+					<!-- Fourth Filter - cpuManufacturer -->
+					<div class="filter__item filter__item--checkbox">
+						<div class="filter__item-heading">
+							<h2>Cpu Manufacturer</h2>
+							<i data-minus="minimize" class="fas fa-minus"></i>
+						</div>
+						<div class="filter__item-body">
+							<div class="form-group">
+								<input class="form-control" type="radio" name="cpuManufacturer" id="intel" value="intel">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="intel">
+									Intel
+								</label>
+							</div>
+							<div class="form-group">
+								<input class="form-control" type="radio" name="cpuManufacturer" id="amd" value="amd">
+								<span>
+									<i class="fas fa-circle-notch"></i>
+									<i class="fas fa-check-circle"></i>
+								</span>
+								<label for="amd">Amd</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<button class="btn" type="reset">Reset</button>
+			</form>
+
+			<!-- Right Side -->
+			<div class="items">
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+				<div class="items-item">
+					<div class="items-item__img">
+						<img src="./img/products/MSI_GT76-1.JPG" alt="not working">
+					</div>
+					<div class="items-item__content">
+						<h2 class="items-item__content__title">MSI GT76</h2>
+						<p class="items-item__content__price"><i class="fas fa-rupee-sign"></i> 2,00,000</p>
+					</div>
+					<a href="/productDetails" class="btn">Check</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Links -->
+	<section id="links">
+		<div class="links container">
+
+			<ul>
+				<li>
+					<h3>About</h3>
+				</li>
+				<li><a href="#">123, Abc Street,Maintown, CA 12345-USA</a></li>
+				<li><a href="#">(111) 222 333 456</a></li>
+				<li><a href="#">cosmos@cosmos.com</a></li>
+				<li>
+					<a href="#">
+						<i class="fab fa-facebook"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-twitter"></i>
+					</a>
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<h3>Information</h3>
+				</li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Delivery Information</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms & Conditions</a></li>
+			</ul>
+
+			<ul>
+				<li>
+					<h3>Extras</h3>
+				</li>
+				<li><a href="#">Gift</a></li>
+				<li><a href="#">Brands</a></li>
+				<li><a href="#">specials</a></li>
+				<li><a href="#">my account</a></li>
+			</ul>
+
+			<ul>
+				<li>
+					<h3>Customer Support</h3>
+				</li>
+				<li><a href="#">Help & support</a></li>
+				<li><a href="#">FAQs</a></li>
+				<li><a href="#">Shipping & Returns</a></li>
+				<li><a href="#">Order</a></li>
+			</ul>
+
+		</div>
+	</section>
+
+	<!-- Section - Footer -->
+	<footer>
+		<div class="footer-inner container">
+			<p>All Rights Reserved &copy; 2020 <span> <i class="fab fa-d-and-d"></i> Gaming Cosmos</span> </p>
+		</div>
+	</footer>
+
+
+	<script src="./js/index.js"></script>
+</body>
+
+</html>

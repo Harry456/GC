@@ -5,7 +5,7 @@ export const appWrapper = document.querySelector('#app-wrapper');
 export const menuOverlay = document.querySelector('.menu-overlay');
 export const showcase = document.querySelector('#showcase');
 export const card = document.querySelectorAll('.card');
-export const collection = document.querySelector('#collection');
+export const collection = document.querySelector('.collection');
 export const arrivalItem = document.querySelectorAll('.arrival__item');
 export const video = document.querySelector('.video');
 
@@ -41,21 +41,13 @@ window.addEventListener('scroll', () => {
     });
   }
 
-  if (pageYOffset >= 600) {
-    collection.style.opacity = '1';
-  } else {
-    collection.style.opacity = '0';
-  }
+  if (collection)
+    if (pageYOffset >= 600) {
+      collection.classList.add('opacity');
+    } else {
+      collection.classList.remove('opacity');
+    }
 
-  // if (pageYOffset >= 900) {
-  //   arrivalItem.forEach((item) => {
-  //     item.classList.add('slideIn');
-  //   });
-  // } else {
-  //   arrivalItem.forEach((item) => {
-  //     item.classList.remove('slideIn');
-  //   });
-  // }
   if (pageYOffset >= 900) {
     arrivalItem.forEach((item) => {
       item.classList.add('fadeIn');

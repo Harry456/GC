@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/js/index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --public-url ./",
+    "dev": "parcel ./src/index.html products.html",
+    "build": "parcel build ./src/index.html products.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "homepage": "https://Harry456.github.io/GC",
@@ -13,11 +13,14 @@
   "author": "harry",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
     "cssnano": "^4.1.10",
     "sass": "^1.30.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "babel-polyfill": "^6.26.0",
     "gh-pages": "^3.1.0"
   }
 }

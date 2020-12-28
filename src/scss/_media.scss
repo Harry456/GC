@@ -353,3 +353,125 @@
 
   //**No Changes for rest of the section **//
 }
+
+// Products Page
+@mixin ProductsXS {
+  #products {
+    .products-wrapper {
+      flex-direction: column;
+
+      .filter {
+        &__item {
+          .page {
+            padding: 0.75rem;
+          }
+          &-heading {
+            font-size: 1rem;
+          }
+          .form-group {
+            font-size: 1.25rem;
+          }
+        }
+
+        .mob-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+        }
+
+        .btn {
+          padding: 1rem 2.5rem;
+        }
+      }
+
+      .items {
+        margin-top: 5rem;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@mixin ProductsSM {
+  #products {
+    .products-wrapper {
+      flex-direction: column;
+
+      .filter {
+        &__item {
+          .page {
+            padding: 0.75rem;
+          }
+          &-heading {
+            font-size: 1.5rem;
+          }
+          .form-group {
+            font-size: 1.35rem;
+          }
+        }
+
+        .mob-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem;
+        }
+
+        .btn {
+          padding: 1rem 2.5rem;
+        }
+      }
+
+      .items {
+        margin-top: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@mixin ProductsMD {
+  #products {
+    .products-wrapper {
+      flex-direction: column;
+
+      .filter {
+        &__item {
+          .page {
+            padding: 0.75rem;
+          }
+          &-heading {
+            font-size: 1rem;
+          }
+          .form-group {
+            font-size: 1.25rem;
+          }
+        }
+
+        .mob-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 1.5rem;
+        }
+
+        .btn {
+          padding: 1rem 2.5rem;
+        }
+      }
+
+      .items {
+        margin-top: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@mixin ProductsLG {
+  #products {
+    .products-wrapper {
+      .items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

@@ -112,17 +112,17 @@
 
 // Section - Collection
 #collection {
-  opacity: 0;
   padding: 7.5rem 0;
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
     url(../img/laps/bg_12.jpg) no-repeat center center/cover;
   border-bottom: 0.5px solid color(border);
-  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   .collection {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     &__title {
       @extend %title;

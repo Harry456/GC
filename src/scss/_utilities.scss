@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.d-none {
+  display: none;
+}
+
 // Variables
 
 $colors: (
@@ -62,4 +66,15 @@ $colors: (
   font-size: $fz;
   color: color(secondary);
   text-transform: capitalize;
+}
+
+// Box-shadow
+@mixin insetShadow($-x, $-y, $x, $y, $blur) {
+  box-shadow: inset $-x $-y $blur rgba(19, 19, 19, 0.5),
+    inset $x $y $blur rgba(0, 0, 0, 0.5);
+}
+@mixin outShadow($-x, $-y, $x, $y, $blur) {
+  box-shadow: $-x $-y $blur rgba(19, 19, 19, 0.5),
+    $x $y $blur rgba(0, 0, 0, 0.5);
+  // transform: translateY(-10px);
 }
