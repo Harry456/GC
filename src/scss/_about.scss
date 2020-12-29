@@ -1,0 +1,127 @@
+@import 'media';
+//**^^ About Us content Start ^^**//
+
+// Repeated Style
+@mixin contentStyle {
+  &__content {
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: color(border);
+
+    &__title {
+      @include title(0.5rem, 0, 4rem);
+      margin-bottom: 1rem;
+      letter-spacing: 0.55rem;
+
+      i {
+        color: color(primaryOverlay);
+        vertical-align: middle;
+      }
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      color: color(secondaryOverlay);
+      margin-bottom: 2rem;
+
+      &--highlight {
+        color: color(primary);
+      }
+    }
+
+    .btn {
+      @extend %btn;
+      &:hover {
+        @extend %btn_hover;
+      }
+    }
+  }
+}
+
+#about {
+  padding-top: 2rem;
+  margin-top: 8.5rem;
+
+  .title {
+    @extend %title;
+    text-align: center;
+  }
+
+  .about {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 650px);
+
+    &__img {
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.3),
+          rgba(0, 0, 0, 0.2)
+        ),
+        url(../img/laps/bg_21.jpg) no-repeat center center/cover;
+    }
+
+    // about__content.
+    @include contentStyle;
+  }
+}
+
+//   Section -Service
+#service {
+  .service {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 650px);
+
+    @include contentStyle;
+
+    &__gallery {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 50%);
+
+      &__img {
+        height: 100%;
+        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+
+        &:hover {
+          z-index: 3;
+          border: 5px solid color(primary);
+          filter: sepia(0.2);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+//**^^ About Us page content End ^^**//
+
+//** Media Queries **//
+@media (max-width: 575.98px) {
+  @include AboutXS;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include AboutSM;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include AboutsMD;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  @include AboutLG;
+}

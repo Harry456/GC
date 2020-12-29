@@ -475,3 +475,149 @@
     }
   }
 }
+
+// About Page:
+@mixin AboutXS {
+  #about {
+    padding-top: 3rem;
+    .about {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 500px);
+
+      &__img {
+        display: none;
+      }
+
+      &__content {
+        padding: 1.5rem 2.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(36, 36, 36, 1);
+        &__title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  // Section Service
+  #service {
+    .service {
+      flex-direction: column-reverse;
+      display: flex;
+
+      &__content {
+        padding: 1.5rem 2.5rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(36, 36, 36, 1);
+        &__title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin AboutSM {
+  #about {
+    padding-top: 3rem;
+    .about {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 500px);
+
+      &__img {
+        display: none;
+      }
+
+      &__content {
+        padding: 0.5rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  // Section Service
+  #service {
+    .service {
+      flex-direction: column-reverse;
+      display: flex;
+
+      &__content {
+        padding: 3rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin AboutsMD {
+  #about {
+    padding-top: 3rem;
+    .about {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(1, 400px);
+
+      &__img {
+        display: none;
+      }
+
+      &__content {
+        padding: 0.5rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  // Section Service
+  #service {
+    .service {
+      flex-direction: column-reverse;
+      display: flex;
+
+      &__content {
+        padding: 5rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin AboutLG {
+  #about {
+    padding-top: 3rem;
+    .about {
+      grid-template-rows: repeat(1, 500px);
+      &__content {
+        padding: 0.5rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  // Section Service
+  #service {
+    .service {
+      grid-template-rows: repeat(1, 500px);
+      &__content {
+        padding: 5rem 2.5rem;
+        text-align: center;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
