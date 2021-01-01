@@ -1,0 +1,197 @@
+#detail {
+  margin-top: 8.5rem;
+
+  .title {
+    @extend %title;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .detail {
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    border-bottom: 1px solid color(border);
+
+    &__img {
+      //border: 5px solid red;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // grid-template-rows: repeat(1, 400px);
+      grid-column-gap: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border: 0.25px solid rgba(168, 116, 26, 0.25);
+        //@include outShadow(0.5px, 0.5px, 0.5px, 0.5px, 5px);
+        box-shadow: 0.5px 0.5px 5px rgba(3, 15, 18, 0.2),
+          0.5px 0.5px 5px rgba(3, 15, 18, 0.2);
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__title {
+        @include title(0, 0, 4rem);
+        position: relative;
+        .price {
+          position: absolute;
+          right: 0;
+          font-size: 3rem;
+          vertical-align: bottom;
+          color: color(primaryOverlay);
+        }
+      }
+
+      &__description {
+        font-size: 1.75rem;
+        text-align: left;
+        text-transform: capitalize;
+        color: color(primary);
+        li {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .key {
+            color: color(secondary);
+          }
+        }
+      }
+      .btn {
+        padding: 1.5rem 3.5rem;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        background-color: color(secondary);
+        color: color(primary);
+        margin-top: 1rem;
+        align-self: flex-start;
+
+        &:hover {
+          background-color: color(primary);
+          color: color(secondary);
+        }
+      }
+    }
+  }
+}
+
+// Section - Review
+#review {
+  .title {
+    @include title(3.5rem, 0, 5rem);
+    letter-spacing: 0.5rem;
+  }
+
+  .review {
+    &__item {
+      border: 1px solid color(border);
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      &__head {
+        padding-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.5rem;
+        color: color(primary);
+        border-bottom: 1px solid color(border);
+
+        &__username,
+        &__date {
+          padding: 1rem;
+          flex: 1;
+          border: 1px solid color(border);
+        }
+        &__username {
+          font-size: 2.5rem;
+        }
+        &__date {
+          text-align: right;
+        }
+      }
+
+      &__body {
+        color: color(secondary);
+        &__heading {
+          padding: 1rem;
+          font-size: 2rem;
+          display: flex;
+          justify-content: space-between;
+          text-transform: capitalize;
+
+          .stars {
+            color: color(primary);
+          }
+        }
+        &__description {
+          padding: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .review__form {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid color(border);
+    .title {
+      @include title(3.5rem, 0, 3rem);
+      letter-spacing: 0.5rem;
+    }
+
+    .review-form {
+      .form-group {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        label {
+          display: inline-block;
+          font-size: 2rem;
+          padding: 1rem 0;
+          color: color(primary);
+        }
+        .form-control {
+          width: 100%;
+          padding: 1rem;
+        }
+
+        select {
+          appearance: none;
+          border: none;
+          color: color(primary);
+        }
+      }
+
+      .btn-wrapper {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          border: none;
+          background-color: color(primary);
+          @extend %btn;
+        }
+      }
+    }
+  }
+}
+
+//** Media Query **//
+@media (max-width: 575.98px) {
+  @include ProductDetailsXS;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include ProductDetailsSM;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include ProductDetailsMD;
+}
+//** No media queries for LG and XL Size due to no changes. **//

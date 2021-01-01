@@ -621,3 +621,109 @@
     }
   }
 }
+
+//** Product Details Media Query START **//
+// REUSABLE REVIEW MIXIN FROM MEDIA QUERIES
+@mixin reviewXSSM {
+  #review {
+    .title {
+      @include title(3.5rem, 0, 3rem);
+      letter-spacing: 0.5rem;
+    }
+    .review {
+      &__item__head__username,
+      &__item__head__date {
+        font-size: 1.75rem;
+      }
+
+      &__item__body__heading {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@mixin ProductDetailsXS {
+  #detail {
+    .title {
+      padding-top: 5rem;
+    }
+    .detail {
+      grid-template-columns: repeat(1, 1fr);
+
+      &__img {
+        margin-bottom: 2rem;
+        grid-template-columns: repeat(1, 1fr);
+
+        grid-gap: 1rem;
+      }
+
+      &__content {
+        &__title {
+          @include title(0, 0, 2rem);
+          .price {
+            font-size: 1.75rem;
+          }
+        }
+
+        &__description {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  // Section - Review
+  @include reviewXSSM;
+  // No Changes In Review Form
+}
+
+@mixin ProductDetailsSM {
+  #detail {
+    .title {
+      padding-top: 5rem;
+    }
+    .detail {
+      grid-template-columns: repeat(1, 1fr);
+
+      &__img {
+        margin-bottom: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-gap: 1rem;
+      }
+
+      &__content {
+        &__title {
+          @include title(0, 0, 2rem);
+          .price {
+            font-size: 1.75rem;
+          }
+        }
+
+        &__description {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  // Section - Review
+  @include reviewXSSM;
+  // No Changes In Review Form
+}
+
+@mixin ProductDetailsMD {
+  #detail {
+    .detail {
+      grid-template-columns: repeat(1, 1fr);
+
+      &__img {
+        margin-bottom: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+      }
+    }
+  }
+  // No Changes In Review Section
+}
+//** Product Details Media Query END **//

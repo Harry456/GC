@@ -98,6 +98,8 @@ inputs.forEach((filterItem) => {
   });
 });
 
-page.addEventListener('change', (e) => {
-  FetchProducts.pagination(e.target.value);
-});
+if (page) {
+  page.addEventListener('change', (e) => {
+    FetchProducts.pagination(e.target.value);
+  });
+}

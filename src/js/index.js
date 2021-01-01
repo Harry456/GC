@@ -2,4 +2,4 @@
 import 'babel-polyfill';
 import * as home from './home.js';
 import * as products from './products';
-//import * as products from './products2';
+import * as productsDetails from './productsDetails.js';
