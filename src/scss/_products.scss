@@ -185,7 +185,7 @@
           left: 50%;
           opacity: 0;
           transition: all 0.25s ease-in-out;
-          transform: scale(-2, -5);
+          transform: translate(-50%, -50%);
           @extend %btn;
 
           &:hover {
@@ -210,7 +210,6 @@
 
           .btn {
             opacity: 1;
-            transform: translate(-50%, -50%);
           }
         }
       }
