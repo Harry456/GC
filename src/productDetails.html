@@ -71,8 +71,8 @@
       <div class="user-info">
 
         <div class="user-info__wrapper user-info__wrapper--cart">
-          <p class="user-info__wrapper__cart__count">0</p>
-          <a href="#">
+          <p class="user-info__wrapper__cart__count">3</p>
+          <a href="./cart.html">
             <i class="fas fa-cart-plus fa-2x"></i>
             <!-- <span>Cart</span> -->
           </a>
@@ -94,7 +94,6 @@
     </div>
   </header>
 
-
   <!-- Products Details Page -->
   <section id="detail">
     <h2 class="title">Product Detail</h2>
@@ -107,8 +106,8 @@
         <h2 class="detail__content__title">acer nitro 5 <span class="price"><i
               class="fas fa-rupee-sign"></i>89,999</span></h2>
         <ul class="detail__content__description">
-          <li><span class="key">brand : </span> acer</li>
-          <li><span class="key">CPU : </span> intel</li>
+          <li><span class="key">brand :</span> acer</li>
+          <li><span class="key">CPU :</span> intel</li>
           <li><span class="key">Processor :</span> intel Core i7-10750H </li>
           <li><span class="key">memorySize :</span> 8GB</li>
           <li><span class="key">memoryType :</span> DDR4</li>
@@ -117,7 +116,22 @@
           <li><span class="key">graphicCoprocessor :</span> NVIDIA GeForce GTX 1660Ti</li>
           <li><span class="key">graphicCardRamSize :</span> 4GB</li>
         </ul>
-        <a href="#" class="btn">add to cart</a>
+        <a href="#" id="addToCart" class="btn">add to cart</a>
+        <form action="#">
+          <select name="qty" id="" class="qty-btn">
+            <option value="">Select Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </form>
       </div>
     </div>
   </section>

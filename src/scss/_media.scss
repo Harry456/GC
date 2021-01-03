@@ -726,3 +726,29 @@
   // No Changes In Review Section
 }
 //** Product Details Media Query END **//
+
+@mixin Cart {
+  #cart {
+    margin-top: 12.5rem;
+    .cart {
+      grid-template-columns: repeat(1, 1fr);
+
+      &__items {
+        &__title {
+          @include title(1rem, 0, 2.75rem);
+        }
+        &__item {
+          grid-template-rows: repeat(1, 150px);
+          ul {
+            flex-direction: column;
+            align-items: flex-end;
+
+            li {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

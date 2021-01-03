@@ -103,3 +103,14 @@ if (page) {
     FetchProducts.pagination(e.target.value);
   });
 }
+
+const addToCart = document.getElementById('addToCart');
+if (addToCart) {
+  addToCart.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.target.innerText = 'Item Added To Cart';
+    // setTimeout(() => {
+    //   e.target.innerText = 'Add To Cart';
+    // }, 2500);
+  });
+}
