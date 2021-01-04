@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/js/index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html products.html about.html productDetails.html",
-    "build": "parcel build ./src/index.html products.html about.html productDetails.html --public-url ./",
+    "dev": "parcel ./src/index.html products.html about.html productDetails.html cart.html signup.html login.html",
+    "build": "parcel build ./src/index.html products.html about.html productDetails.html cart.html signup.html login.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "homepage": "https://Harry456.github.io/GC",

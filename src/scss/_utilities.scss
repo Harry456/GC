@@ -78,3 +78,87 @@ $colors: (
     $x $y $blur rgba(0, 0, 0, 0.5);
   // transform: translateY(-10px);
 }
+
+@mixin form-btn($mt) {
+  padding: 1.5rem 3.5rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  background-color: color(primary);
+  color: color(secondary);
+  border: none;
+  margin-top: $mt;
+}
+
+%form-btn_hover {
+  background-color: color(primaryOverlay);
+}
+
+// Reusable Auth Style
+
+@mixin auth {
+  margin-top: 8.5rem;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid color(border);
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url(../img/laps/bg_21.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+
+  .auth {
+    &-wrapper {
+      padding: 1rem 2.5rem;
+      @include outShadow(-1px, -1px, 1px, 1px, 2px);
+    }
+
+    .auth__title {
+      @include title(1rem, 1rem, 3rem);
+      text-align: center;
+    }
+
+    .auth__form {
+      label {
+        display: inline-block;
+        padding: 1rem 0;
+        font-size: 1.75rem;
+        color: color(primary);
+        letter-spacing: 0.25rem;
+      }
+
+      .form-control {
+        width: 100%;
+        display: block;
+        padding: 1rem 2rem;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .btn {
+        @include form-btn(2rem);
+
+        &:active {
+          @include insetShadow(-1px, -1px, 1px, 1px, 1px);
+        }
+      }
+    }
+    .auth__msg {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: color(secondary);
+      text-transform: capitalize;
+
+      p {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      span {
+        align-self: center;
+      }
+      a {
+        font-size: 1.5rem;
+        color: color(primary);
+      }
+    }
+  }
+}

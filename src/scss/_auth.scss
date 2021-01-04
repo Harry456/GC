@@ -1,0 +1,9 @@
+#signup {
+  @include auth;
+}
+
+#login {
+  @include auth;
+}
+
+// No Media Queries - fits good in all size
