@@ -1,3 +1,7 @@
+// Variables
+$XSM: true;
+$notXSM: false;
+
 .container {
   max-width: 90%;
   width: 1660px;
@@ -80,6 +84,7 @@ $colors: (
 }
 
 @mixin form-btn($mt) {
+  cursor: pointer;
   padding: 1.5rem 3.5rem;
   font-size: 1.5rem;
   text-transform: capitalize;
@@ -90,7 +95,7 @@ $colors: (
 }
 
 %form-btn_hover {
-  background-color: color(primaryOverlay);
+  background-color: rgba(168, 116, 26, 0.9);
 }
 
 // Reusable Auth Style

@@ -354,7 +354,7 @@
   //**No Changes for rest of the section **//
 }
 
-// Products Page
+//** Products Page Media Query START **//
 @mixin ProductsXS {
   #products {
     .products-wrapper {
@@ -475,8 +475,9 @@
     }
   }
 }
+//**---------------Products Page Media Query END---------------------------**//
 
-// About Page:
+//** About Page Media Query START **//
 @mixin AboutXS {
   #about {
     padding-top: 3rem;
@@ -621,6 +622,7 @@
     }
   }
 }
+//**---------------About Page Media Query END---------------------------**//
 
 //** Product Details Media Query START **//
 // REUSABLE REVIEW MIXIN FROM MEDIA QUERIES
@@ -725,8 +727,9 @@
   }
   // No Changes In Review Section
 }
-//** Product Details Media Query END **//
+//**---------------Product Details Media Query END---------------------------**//
 
+// ** Cart Page Media Query Start **//
 @mixin Cart {
   #cart {
     margin-top: 12.5rem;
@@ -745,6 +748,84 @@
 
             li {
               padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//**---------------Cart Page Media Query END---------------------------**//
+
+// ** orderOverview Page Media Query Start **//
+@mixin orderOverview($XSMsize, $FS, $flexDir, $alignItems) {
+  #orders {
+    .orders {
+      @if ($XSMsize) {
+        grid-template-columns: repeat(1, 1fr);
+      } @else {
+        grid-template-columns: 60% 40%;
+      }
+
+      &-items {
+        margin-top: 1rem;
+        .title {
+          @include title(1rem, 0, 2.75rem);
+        }
+
+        &__items {
+          &__item {
+            font-size: $FS;
+
+            ul {
+              flex-direction: $flexDir;
+              align-items: $alignItems;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//**---------------orderOverview Page Media Query END---------------------------**//
+
+// ** Contact Page Media Query Start **//
+@mixin contact($titleSize, $XSMsize, $CDFontSize) {
+  #contact {
+    .contact {
+      .title {
+        @include title(3.5rem, 0, $titleSize);
+      }
+
+      &__content {
+        @if ($XSMsize) {
+          grid-template-columns: repeat(1, 1fr);
+        } @else {
+          grid-template-columns: 60% 40%;
+        }
+
+        .contact-form {
+          .form-group {
+            // Layout Split
+            @if ($XSMsize) {
+              grid-template-columns: repeat(1, 1fr);
+              grid-gap: 0;
+            } @else {
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 1rem;
+            }
+          }
+        }
+
+        .contact-details {
+          padding: 0;
+          margin-top: 1rem;
+          font-size: $CDFontSize;
+          &__item {
+            &__info {
+              p {
+                padding: 0.25rem 0;
+              }
             }
           }
         }

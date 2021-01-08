@@ -1,0 +1,121 @@
+#contact {
+  margin-top: 8.5rem;
+  .contact {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid color(border);
+    .title {
+      @include title(2.5rem, 0, 5rem);
+      text-align: center;
+    }
+
+    .form-title {
+      @include title(1rem, 0, 2.5rem);
+      color: color(primary);
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 60% 40%);
+      grid-gap: 1rem;
+
+      .contact-form {
+        //border: 1px solid red;
+        padding: 0 1rem;
+        .form-control {
+          display: block;
+          width: 100%;
+          margin: 1.5rem 0;
+          padding: 1.25rem;
+          font-size: 1.5rem;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+          .form-control {
+            margin-bottom: 0;
+          }
+        }
+
+        .btn {
+          @include form-btn(0);
+          transition: all 0.5s;
+
+          &:hover {
+            @extend %form-btn_hover;
+          }
+        }
+      }
+
+      .contact-details {
+        padding: 1.25rem 0 0 7.5rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: color(secondary);
+        //border: 1px solid red;
+
+        &__item {
+          display: grid;
+          grid-template-columns: repeat(2, 12.5% 87.5%);
+          align-items: center;
+          margin-bottom: 2.5rem;
+          //border: 1px solid green;
+
+          .icon {
+            text-align: center;
+            //border: 1px solid yellow;
+            i {
+              //border: 1px solid yellow;
+              font-size: 3.5rem;
+              color: color(secondaryOverlay);
+            }
+          }
+
+          &__info {
+            margin-left: 1rem;
+            p {
+              padding: 0.5rem 0;
+            }
+          }
+
+          // Modifier
+          &--phone {
+            .contact-details__item__info {
+              p:nth-child(2) {
+                color: color(primaryOverlay);
+              }
+            }
+          }
+
+          // Modifier
+          &--email {
+            .contact-details__item__info {
+              p:nth-child(2) {
+                color: color(primaryOverlay);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//** Media Queries **//
+@media (max-width: 575.98px) {
+  @include contact(3.5rem, $XSM, 1.5rem);
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include contact(3.5rem, $XSM, 1.75rem);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include contact(5rem, $notXSM, 1.5rem);
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  @include contact(5rem, $notXSM, 1.5rem);
+}
