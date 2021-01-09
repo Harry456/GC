@@ -2,6 +2,9 @@
 $XSM: true;
 $notXSM: false;
 
+$truthy: true;
+$falsy: false;
+
 .container {
   max-width: 90%;
   width: 1660px;
@@ -32,6 +35,7 @@ $colors: (
 // Inheritance
 
 %btn {
+  display: inline-block;
   padding: 1.5rem 3.5rem;
   font-size: 1.5rem;
   color: color(secondary);

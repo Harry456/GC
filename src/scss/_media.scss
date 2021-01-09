@@ -833,3 +833,30 @@
     }
   }
 }
+//**---------------Contact Page Media Query END---------------------------**//
+
+//** MyOrder Page Media Query Start **//
+
+@mixin myorder($XSM, $MD, $LG) {
+  #myorders {
+    margin-top: 10rem;
+    .myorders {
+      .title {
+        @include title(2.5rem, 0, 3rem);
+      }
+      .orderitems {
+        // Layout Split
+        @if ($XSM) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 2rem;
+        } @else if($MD) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        } @else if($LG) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
+}
