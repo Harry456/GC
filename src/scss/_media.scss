@@ -860,3 +860,74 @@
     }
   }
 }
+
+//**---------------MyOrder Page Media Query END---------------------------**//
+
+//** Profile Page Media Query Start **//
+@mixin Profile(
+  $ProfileFS,
+  $gridcol,
+  $XS,
+  $imgContWid,
+  $imgWrpWid,
+  $infoFS,
+  $XSM
+) {
+  #profile {
+    .profile {
+      .title {
+        @include title(3rem, 0, $ProfileFS);
+        text-align: center;
+      }
+
+      &__details {
+        grid-template-columns: $gridcol;
+        @if ($XS) {
+          grid-template-rows: 300px repeat(2, 275px);
+        } @else {
+          grid-template-rows: repeat(3, 300px);
+        }
+
+        &__image {
+          width: $imgContWid;
+          .img-wrapper {
+            align-self: center;
+            width: $imgWrpWid;
+            height: 75%;
+          }
+        }
+
+        &__info {
+          font-size: $infoFS;
+
+          &.edit {
+            form {
+              li {
+                input {
+                  width: 65%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Section - Security
+  #security {
+    .security-wrapper {
+      @if ($XSM) {
+        grid-template-columns: repeat(1, 1fr);
+      } @else {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .security {
+        .title {
+          @include title(1rem, 0, 3rem);
+        }
+      }
+    }
+  }
+}

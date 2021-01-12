@@ -1,0 +1,251 @@
+#profile {
+  margin-top: 8.5rem;
+
+  .profile {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid color(border);
+    .title {
+      @include title(2rem, 0, 5rem);
+      text-align: center;
+    }
+    &__details {
+      padding: 2.5rem;
+      display: grid;
+      //grid-template-columns: 20% repeat(2, 1fr);
+      grid-template-columns: 50%;
+      grid-template-rows: repeat(3, 300px);
+      justify-content: center;
+      grid-gap: 2rem;
+
+      &__image {
+        position: relative;
+        //border: 1px solid violet;
+        padding: 1rem;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+
+        box-shadow: 1px 1px 1px rgba(19, 19, 19, 0.5),
+          -1px -1px 1px rgba(19, 19, 19, 0.5);
+        .img-wrapper {
+          //border: 1px solid red;
+          width: 100%;
+          height: 70%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+        }
+
+        .img-upload-form {
+          height: 20%;
+          //border: 1px solid green;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 2rem;
+          text-align: center;
+          transition: 0.5s ease-in-out;
+
+          .form-group {
+            label {
+              @include btn(0.5rem, 2.5rem, 1.5rem, secondary);
+
+              &:hover {
+                @extend %btn_hover;
+              }
+            }
+            .form-control {
+              display: none;
+            }
+          }
+          .btn {
+            @include btn(0.75rem, 2.5rem, 1.5rem, secondary);
+            background: none;
+            &:hover {
+              @extend %btn_hover;
+            }
+          }
+        }
+      }
+
+      &__info {
+        //border: 1px solid yellow;
+        padding: 0.5rem;
+        font-size: 1.75rem;
+        color: color(secondary);
+        position: relative;
+        box-shadow: 1px 1px 1px rgba(19, 19, 19, 0.5),
+          -1px -1px 1px rgba(19, 19, 19, 0.5);
+
+        .info-title {
+          text-transform: capitalize;
+          text-align: center;
+          color: color(primary);
+        }
+        ul {
+          li {
+            padding: 0.75rem;
+            text-transform: capitalize;
+            display: flex;
+            justify-content: space-between;
+
+            .value {
+              color: color(primaryOverlay);
+              text-transform: lowercase;
+            }
+
+            &:nth-last-of-type(2) {
+              .value {
+                text-transform: capitalize;
+                color: green;
+              }
+            }
+          }
+          .edit-btn {
+            position: absolute;
+            padding-bottom: 1rem;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+            font-size: 2.5rem;
+            color: color(primary);
+          }
+        }
+
+        &--shipping-address {
+          ul {
+            li:nth-last-of-type(2) {
+              .value {
+                color: color(primaryOverlay);
+              }
+            }
+          }
+        }
+
+        // On Edit State:
+        &.edit {
+          position: relative;
+          form {
+            ul {
+              li {
+                label {
+                  //border: 1px solid red;
+                  flex: 1;
+                }
+                input {
+                  flex: 2;
+                  border: none;
+                  outline: none;
+                  background: none;
+                  color: color(secondary);
+                  font-family: 'Poppins', sans-serif;
+                  border-bottom: 0.1px solid color(secondary);
+                }
+
+                &:nth-last-of-type(1) button {
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  padding: 1rem;
+                  cursor: pointer;
+                  font-size: 3rem;
+                  color: color(primary);
+                  background: none;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // #info-edit {
+    //   display: none;
+    // }
+    // #address-edit {
+    //   display: none;
+    // }
+  }
+}
+
+// Section - security
+#security {
+  margin-top: 5rem;
+  .security-wrapper {
+    //display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid color(border);
+
+    .security {
+      padding: 2rem;
+      box-shadow: 1px 1px 1px rgba(19, 19, 19, 0.5),
+        -1px -1px 1px rgba(19, 19, 19, 0.5);
+
+      .title {
+        @include title(1rem, 0, 5rem);
+      }
+
+      .security__form {
+        //border: 1px solid green;
+
+        margin: 1rem 0;
+        width: 100%;
+
+        .form-group {
+          padding: 0.5rem 0;
+          text-transform: capitalize;
+
+          label {
+            display: inline-block;
+            padding: 0.5rem 0;
+            font-size: 2rem;
+            color: color(primary);
+          }
+          .form-control {
+            width: 100%;
+            display: block;
+            padding: 1.25rem 0.25rem;
+            border: none;
+
+            &:disabled {
+              cursor: not-allowed;
+              background: color(secondaryOverlay);
+            }
+          }
+        }
+
+        .btn {
+          @include form-btn(0.5rem);
+
+          &:hover {
+            @extend %form-btn_hover;
+          }
+        }
+      }
+    }
+  }
+}
+// Media Queries
+
+@media (max-width: 575.98px) {
+  @include Profile(3rem, 100%, $truthy, 100%, 80%, 1.25rem, $truthy);
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include Profile(3rem, 100%, $falsy, 60%, 80%, 1.5rem, $truthy);
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include Profile(3rem, 100%, $falsy, 50%, 80%, 1.75rem, $falsy);
+}
+
+@media (min-width: 992px) and (max-width: 1350px) {
+  @include Profile(3.5rem, 75%, $falsy, 50%, 80%, 1.75rem, $falsy);
+}

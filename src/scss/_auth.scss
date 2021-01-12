@@ -6,4 +6,16 @@
   @include auth;
 }
 
+#forgotPassword {
+  @include auth;
+
+  .status-msg {
+    position: absolute;
+    color: color(secondary);
+    padding: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    background-color: color(primaryOverlay);
+  }
+}
 // No Media Queries - Looks good in all size

@@ -48,6 +48,17 @@ $colors: (
   background-color: color(primary);
 }
 
+// Custom btn
+@mixin btn($py, $px, $fs, $color) {
+  display: inline-block;
+  padding: $py $px;
+  font-size: $fs;
+  color: color($color);
+  text-transform: capitalize;
+  border: 1px solid color(primary);
+  transition: all 0.25s ease-in;
+}
+
 %title {
   padding: 0.5rem 0;
   color: color(secondary);
@@ -88,6 +99,7 @@ $colors: (
 }
 
 @mixin form-btn($mt) {
+  display: inline-block;
   cursor: pointer;
   padding: 1.5rem 3.5rem;
   font-size: 1.5rem;
@@ -96,6 +108,7 @@ $colors: (
   color: color(secondary);
   border: none;
   margin-top: $mt;
+  transition: 0.25s all ease-in-out;
 }
 
 %form-btn_hover {
@@ -103,11 +116,11 @@ $colors: (
 }
 
 // Reusable Auth Style
-
 @mixin auth {
   margin-top: 8.5rem;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid color(border);

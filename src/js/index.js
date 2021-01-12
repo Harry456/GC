@@ -2,3 +2,4 @@
 import 'babel-polyfill';
 import * as home from './home.js';
 import * as products from './products';
+import * as profile from './profile';
