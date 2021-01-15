@@ -64,12 +64,13 @@
         }
       }
       .btn {
-        padding: 1.5rem 3.5rem;
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        background-color: color(secondary);
-        color: color(primary);
+        // padding: 1.5rem 3.5rem;
+        // font-size: 1.5rem;
+        // text-transform: capitalize;
+        // background-color: color(secondary);
+        // color: color(primary);
         margin-top: 1rem;
+        @include btn(1rem, 2.5rem, 1.25rem, secondary);
         align-self: flex-start;
 
         &:hover {

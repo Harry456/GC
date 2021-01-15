@@ -54,6 +54,7 @@ if (profile) {
                 </li>
                 <li>
                   <button id="info-save" type="submit"><i class="far fa-save"></i></button>
+                  <a id="info-cancel" type="submit"><i class="fas fa-times"></i></a>
                 </li>
               </ul>
             </form>
@@ -114,6 +115,7 @@ if (profile) {
                 </li>
                 <li>
                   <button id="address-save" type="submit"><i class="far fa-save"></i></button>
+                  <a id="address-cancel" type="submit"><i class="fas fa-times"></i></a>
                 </li>
               </ul>
             </form>
@@ -150,6 +152,7 @@ if (profile) {
 
 const forgotPassword = document.querySelector('#forgotpwd');
 
+console.log(location);
 forgotPassword.addEventListener('submit', (e) => {
   e.preventDefault();
   location.href = '/resetMsg.html';

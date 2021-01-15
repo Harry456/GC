@@ -1,0 +1,80 @@
+//Section - Header
+header {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: color(bgColor);
+  transition: all 0.5s ease-in;
+  // border-bottom: 1px solid color(border);
+  box-shadow: 0px 1px 1px color(border);
+
+  .navigation {
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    color: color(secondary);
+
+    .menu-btn {
+      align-self: center;
+      cursor: pointer;
+    }
+
+    .brand {
+      align-self: center;
+      display: flex;
+
+      i {
+        color: color(primary);
+        padding: 0.75rem;
+        font-size: 4rem;
+      }
+
+      &__name {
+        align-self: center;
+        font-size: 2rem;
+      }
+    }
+
+    .user-info {
+      display: flex;
+      align-self: center;
+
+      &__wrapper {
+        display: flex;
+        padding: 1rem 1.5rem;
+        border: 1px solid color(border);
+        position: relative;
+
+        &__cart__count {
+          position: absolute;
+          top: -1rem;
+          right: 0;
+          padding: 0.5rem 1rem;
+          font-size: 1.25rem;
+          background-color: color(primary);
+          border-radius: 50%;
+        }
+
+        // Modifier
+        &--cart {
+          margin-right: 0.5rem;
+        }
+      }
+
+      a {
+        align-self: flex-end;
+        color: color(secondary);
+
+        i {
+          margin: 0 0.25rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
