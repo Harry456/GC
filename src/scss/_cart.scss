@@ -9,7 +9,47 @@
     padding-bottom: 5rem;
     border-bottom: 1px solid color(border);
 
+    &__empty-cart {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      text-align: center;
+      padding-left: 33.33%;
+
+      i {
+        font-size: 5rem;
+        color: color(primary);
+      }
+      .title {
+        @include title(1rem, 0, 3.5rem);
+      }
+      .btn {
+        @extend %btn;
+
+        &:hover {
+          @extend %btn_hover;
+        }
+      }
+    }
+
     &__items {
+      //border: 1px solid red;
+      padding-bottom: 7.5rem;
+      position: relative;
+
+      .delete-all {
+        @extend %btn;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &:hover {
+          @extend %btn_hover;
+        }
+      }
+
       &__title {
         @include title(1rem, 0, 3.5rem);
       }

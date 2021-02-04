@@ -101,11 +101,18 @@
 // Section - Review
 #review {
   .title {
-    @include title(3.5rem, 0, 5rem);
+    @include title(2rem, 0, 5rem);
     letter-spacing: 0.5rem;
   }
 
   .review {
+    .status-Msg {
+      padding: 1rem 0;
+      font-size: 1.75rem;
+      text-align: center;
+      text-transform: capitalize;
+      color: color(primary);
+    }
     &__item {
       border: 1px solid color(border);
       padding-bottom: 1rem;
@@ -134,7 +141,9 @@
       }
 
       &__body {
+        position: relative;
         color: color(secondary);
+        padding: 2.5rem 0;
         &__heading {
           padding: 1rem;
           font-size: 2rem;
@@ -150,6 +159,62 @@
           padding: 1rem;
           font-size: 1.5rem;
         }
+        .edit-review {
+          cursor: pointer;
+          color: color(primary);
+          position: absolute;
+          padding: 0.5rem;
+          bottom: 0;
+          right: 0.5rem;
+        }
+        .delete-review {
+          cursor: pointer;
+          color: color(primary);
+          position: absolute;
+          padding: 0.5rem;
+          bottom: 0;
+          left: 0.5rem;
+        }
+      }
+    }
+
+    &__item__edit {
+      margin: 1rem 0;
+      .title {
+        @include title(2rem, 0, 2.5rem);
+      }
+      // Repeated code
+      .form-group {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        label {
+          display: inline-block;
+          font-size: 2rem;
+          padding: 0.25rem 0;
+          color: color(primary);
+        }
+        .form-control {
+          width: 100%;
+          padding: 1rem;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        select {
+          appearance: none;
+          border: none;
+          color: color(primary);
+        }
+      }
+      .btn-wrapper {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        .btn {
+          border: none;
+          background-color: color(primary);
+          @extend %btn;
+        }
       }
     }
   }
@@ -163,6 +228,7 @@
     }
 
     .review-form {
+      // Repeated code
       .form-group {
         width: 100%;
         margin-bottom: 1rem;
@@ -176,6 +242,7 @@
         .form-control {
           width: 100%;
           padding: 1rem;
+          font-family: 'Poppins', sans-serif;
         }
 
         select {

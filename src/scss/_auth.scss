@@ -1,9 +1,25 @@
 #signup {
   @include auth;
+  .errorMsg {
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    color: red;
+  }
 }
 
 #login {
   @include auth;
+  .errorMsg {
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    color: red;
+  }
 }
 
 #forgotPassword {
@@ -18,4 +34,17 @@
     background-color: color(primaryOverlay);
   }
 }
+
+#newPassword {
+  @include auth;
+  .errorMsg {
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.25rem;
+    color: red;
+  }
+}
+
 // No Media Queries - Looks good in all size

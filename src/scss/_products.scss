@@ -12,6 +12,47 @@
     @extend %title;
   }
 
+  .search {
+    text-align: center;
+    width: 50%;
+    padding: 2rem 0;
+
+    .form-group {
+      display: flex;
+      justify-content: center;
+      border: none;
+      outline: none;
+      .form-control {
+        flex: 1;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+
+        &::placeholder {
+          text-align: center;
+          letter-spacing: 0.5rem;
+          text-transform: capitalize;
+        }
+      }
+
+      .search-icon {
+        margin-left: -3.75rem;
+        padding: 1rem;
+        // border-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        font-size: 2rem;
+        background-color: color(primary);
+        border: none;
+
+        i {
+          color: rgba(0, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+
   .products-wrapper {
     //** Layout Split here **//
     display: flex;
@@ -119,6 +160,7 @@
       flex: 4;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       grid-gap: 2rem;
 
       &-item {
@@ -165,8 +207,9 @@
           transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
           &__title {
+            padding: 0.5rem 0;
             text-transform: uppercase;
-            font-size: 2.25rem;
+            font-size: 1.5rem;
             letter-spacing: 0.2rem;
             border-bottom: 1px solid color(border);
           }
@@ -176,6 +219,15 @@
             i {
               color: color(primary);
             }
+          }
+
+          &__rating {
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: color(primaryOverlay);
           }
         }
 
@@ -205,6 +257,10 @@
           }
 
           .items-item__content {
+            color: color(primary);
+          }
+
+          .items-item__content__rating {
             color: color(primary);
           }
 

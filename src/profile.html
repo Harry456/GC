@@ -117,8 +117,8 @@
         </div>
 
         <!-- Normal Mode -->
-        <div id="info-default" class="profile__details__info profile__details__info--basic-info">
-          <!-- <h2 class="info-title">basic info</h2>
+        <!-- <div id="info-default" class="profile__details__info profile__details__info--basic-info">
+          <h2 class="info-title">basic info</h2>
           <ul>
             <li>
               <span class="key">username :</span>
@@ -136,11 +136,11 @@
               <span class="key">account status :</span>
               <span class="value">active</span>
             </li>
-            <li id="infoEdit-btn" class="edit-btn">
-              <i class="fas fa-user-edit"></i>
-            </li>
-          </ul> -->
-        </div>
+          </ul>
+          <div id="infoEdit-btn" class="edit-btn">
+            <i class="fas fa-user-edit"></i>
+          </div>
+        </div> -->
 
         <!-- On info Edit State -->
         <!-- <div id="info-edit" class="profile__details__info profile__details__info--basic-info edit">
@@ -175,7 +175,7 @@
 
         <!-- Normal Mode -->
         <div id="address-default" class="profile__details__info profile__details__info--shipping-address">
-          <!-- <h2 class="info-title">shipping address</h2>
+          <h2 class="info-title">shipping address</h2>
           <ul>
             <li>
               <span class="key">street :</span>
@@ -197,14 +197,17 @@
               <span class="key">country :</span>
               <span class="value">USA</span>
             </li>
-            <li id="addressEdit-btn" class="edit-btn">
+            <!-- <li id="addressEdit-btn" class="edit-btn">
               <i class="fas fa-user-edit"></i>
-            </li>
-          </ul> -->
+            </li> -->
+          </ul>
+          <div id="addressEdit-btn" class="edit-btn">
+            <i class="fas fa-user-edit"></i>
+          </div>
         </div>
 
         <!-- On address Edit Mode -->
-        <!-- <div id="address-edit" class="profile__details__info profile__details__info--shipping-address edit">
+        <div id="address-edit" class="profile__details__info profile__details__info--shipping-address edit">
           <h2 class="info-title">edit shipping address</h2>
           <form action="#" id="basic-info-edit">
             <ul>
@@ -228,12 +231,14 @@
                 <label for="country">country :</label>
                 <input type="text" name="country" id="country">
               </li>
-              <li>
+              <!-- <li>
                 <button id="address-save" type="submit"><i class="far fa-save"></i></button>
-              </li>
+              </li> -->
             </ul>
+            <button id="address-save" type="submit"><i class="far fa-save"></i></button>
           </form>
-        </div> -->
+          <a id="info-cancel" type="submit"><i class="fas fa-times"></i></a>
+        </div>
 
       </div>
 
@@ -242,6 +247,7 @@
 
   <section id="security">
     <div class="security-wrapper container">
+
       <div class="security security--change-password">
         <h2 class="title">change password</h2>
         <form action="#" class="security__form" id="password-form">
@@ -257,6 +263,7 @@
             <label for="confirm password">confirm password</label>
             <input type="password" name="confirm password" id="confirm password" class="form-control">
           </div>
+          <p class="errorMsg">This if for error msg</p>
           <button class="btn" type="submit">update password</button>
         </form>
       </div>
@@ -287,6 +294,7 @@
           <button class="btn" type="submit">Add Address</button>
         </form>
       </div>
+
     </div>
 
   </section>

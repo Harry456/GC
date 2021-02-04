@@ -357,10 +357,21 @@
 //** Products Page Media Query START **//
 @mixin ProductsXS {
   #products {
+    .search {
+      .form-group {
+        .form-control {
+          &::placeholder {
+            text-align: left;
+          }
+        }
+      }
+    }
+
     .products-wrapper {
       flex-direction: column;
 
       .filter {
+        margin-right: 0;
         &__item {
           .page {
             padding: 0.75rem;
@@ -398,6 +409,7 @@
       flex-direction: column;
 
       .filter {
+        margin-right: 0;
         &__item {
           .page {
             padding: 0.75rem;
@@ -737,6 +749,20 @@
     .cart {
       grid-template-columns: repeat(1, 1fr);
 
+      &__empty-cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        text-align: center;
+        padding-left: 0;
+
+        .title {
+          @include title(1rem, 0, 3rem);
+        }
+      }
+
       &__items {
         &__title {
           @include title(1rem, 0, 2.75rem);
@@ -749,6 +775,7 @@
 
             li {
               padding: 0;
+              font-size: 1.5rem;
             }
           }
         }

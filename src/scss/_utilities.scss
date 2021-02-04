@@ -115,6 +115,67 @@ $colors: (
   background-color: rgba(168, 116, 26, 0.9);
 }
 
+.loader-wrapper {
+  height: 75vh;
+  position: relative;
+
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 3rem;
+    border: 10px solid color(secondary);
+    border-right-color: color(primary);
+    border-radius: 50%;
+    animation: loading 2s infinite linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+}
+
+@keyframes loading {
+  /* 100% keyframe for  clockwise. 
+     use 0% instead for anticlockwise */
+  // 1% {
+  //   transform: scale(10) translateX(-50px) rotateZ(90deg);
+  // }
+  // 25% {
+  //   // transform: scale(-10) translateY(-100px) rotateX(180deg);
+  //   transform: scale(-10);
+  // }
+  // 50% {
+  //   transform: scale(5) translateY(100px) rotateY(240deg);
+  // }
+  // 75% {
+  //   transform: scale(2.5) translateX(100px) rotate(360deg);
+  // }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Error Message
+.error-wrapper {
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid color(border);
+
+  .error-msg {
+    p {
+      font-size: 2.5rem;
+      color: color(primary);
+      text-align: center;
+
+      i {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
 // Reusable Auth Style
 @mixin auth {
   margin-top: 8.5rem;
