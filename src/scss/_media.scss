@@ -959,3 +959,15 @@
     }
   }
 }
+//**---------------Profile Page Media Query END---------------------------**//
+
+//** Admin Page Media Query Start **//
+@mixin admin {
+  #admin {
+    .admin-panel {
+      &-items {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
