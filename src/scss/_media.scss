@@ -971,3 +971,50 @@
     }
   }
 }
+//**---------------Admin Page Media Query END---------------------------**//
+
+//** Manage Users Page Media Query Start **//
+@mixin manageUsers($XSM, $MD, $LG) {
+  #manage-users {
+    .users {
+      .nav {
+        padding: 2rem 0;
+        .title {
+          @include title(2rem, 0, 3rem);
+        }
+      }
+
+      .all-users {
+        @if ($XSM) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 2rem;
+        } @else if($MD) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        } @else if($LG) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
+}
+//**---------------Manage Users Page Media Query END---------------------------**//
+
+//** EditUser Page Media Query Start **//
+@mixin editUser($width) {
+  #edit-User {
+    .nav {
+      padding: 1.5rem 0;
+      .title {
+        @include title(1rem, 0, 3rem);
+      }
+    }
+
+    .edit-user {
+      .edit-form {
+        width: $width !important;
+      }
+    }
+  }
+}

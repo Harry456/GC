@@ -1,0 +1,75 @@
+#edit-User {
+  margin-top: 8.5rem;
+
+  .user {
+    border-bottom: 1px solid color(border);
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        @include title(2.5rem, 0, 3.5rem);
+      }
+      .btn {
+        align-self: center;
+        @extend %btn;
+
+        &:hover {
+          @extend %btn_hover;
+        }
+      }
+    }
+
+    .edit-user {
+      display: flex;
+      justify-content: center;
+      height: 50vh;
+
+      .edit-form {
+        width: 60%;
+
+        .form-group {
+          margin-bottom: 1rem;
+          label {
+            display: inline-block;
+            font-size: 1.75rem;
+            padding: 0.5rem 0;
+            text-transform: capitalize;
+            color: color(primary);
+          }
+          .form-control {
+            display: block;
+            width: 100%;
+            padding: 1.5rem 0;
+            font-family: 'Poppins', sans-serif;
+            text-transform: capitalize;
+          }
+        }
+
+        .btn {
+          @include form-btn(0.5rem);
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+// XS
+@media (max-width: 575.98px) {
+  @include editUser(100%);
+}
+
+// SM
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include editUser(90%);
+}
+
+// MD
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include editUser(90%);
+}
+
+// LG
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  @include editUser(75%);
+}

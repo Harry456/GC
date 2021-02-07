@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./scss/main.scss">
   <script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin="anonymous"></script>
-  <title>Shopping Cart</title>
+  <title>Manage Users</title>
 </head>
 
-<body>
 
+<body>
+  <!-- Section - Nav -->
   <nav id="navbar">
     <div class="main-nav">
 
@@ -36,7 +37,7 @@
           <a href="./about.html" class="nav-link">about</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">contact</a>
+          <a href="./contact.html" class="nav-link">contact</a>
         </li>
         <!-- Show Only if logged In -->
         <li class="nav-item">
@@ -46,7 +47,7 @@
           <a href="./myOrders.html" class="nav-link">my Orders</a>
         </li>
         <!-- Show only if user is admin -->
-        <li class="nav-item">
+        <li class="nav-item nav-item--active">
           <a href="#" class="nav-link">admin</a>
         </li>
         <li class="nav-item">
@@ -75,7 +76,7 @@
 
         <div class="user-info__wrapper user-info__wrapper--cart">
           <p class="user-info__wrapper__cart__count">3</p>
-          <a href="#">
+          <a href="./cart.html">
             <i class="fas fa-cart-plus fa-2x"></i>
             <!-- <span>Cart</span> -->
           </a>
@@ -84,9 +85,9 @@
         <div class="user-info__wrapper user-info__signin">
           <!-- Show if Logged IN -->
           <!-- <a href="#" class="">
-  									<i class="fas fa-user fa-2x"></i>
-  									<span>UserName</span>
-  								</a> -->
+        											<i class="fas fa-user fa-2x"></i>
+        											<span>UserName</span>
+        										</a> -->
           <a href="./login.html">
             <i class="fas fa-user fa-2x"></i>
             <span>Sign In</span>
@@ -97,97 +98,35 @@
     </div>
   </header>
 
-  <!-- Section - Cart -->
-  <section id="cart">
-    <div class="cart container">
-      <!-- <div class="cart__empty-cart">
-        <i class="fas fa-cart-plus"></i>
-        <h1 class="title">your basket is empty</h1>
-        <a href="./products.html" class="btn">Shop Now</a>
-      </div> -->
-
-      <div class="cart__items">
-        <h2 class="cart__items__title">Shopping Cart</h2>
-
-        <div class="cart__items__item">
-          <div class="img">
-            <img src="./img/products/MSI_GT76-1.JPG" alt="MSI_GT76-1">
-          </div>
-          <ul>
-            <li>MSI_GT76</li>
-            <li><i class="fas fa-rupee-sign"></i> 180000</li>
-            <li>
-              <select name="qty" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </li>
-            <li>
-              <i class="far fa-trash-alt"></i>
-            </li>
-          </ul>
-        </div>
-
-        <div class="cart__items__item">
-          <div class="img">
-            <img src="./img/products/Acer_Predator_21X-2.JPG" alt="MSI_GT76-1">
-          </div>
-          <ul>
-            <li>Acer_Predator_21X</li>
-            <li><i class="fas fa-rupee-sign"></i> 600000</li>
-            <li>
-              <select name="qty" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </li>
-            <li>
-              <i class="far fa-trash-alt"></i>
-            </li>
-          </ul>
-        </div>
-
-        <div class="cart__items__item">
-          <div class="img">
-            <img src="./img/products/ROG_Zephyrus_G14-1.JPG" alt="MSI_GT76-1">
-          </div>
-          <ul>
-            <li>ROG_Zephyrus_G14</li>
-            <li><i class="fas fa-rupee-sign"></i> 500000</li>
-            <li>
-              <select name="qty" id="">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </li>
-            <li>
-              <i class="far fa-trash-alt"></i>
-            </li>
-          </ul>
-        </div>
-
-        <a href="#" class="delete-all">Delete All</a>
+  <!-- Section Edit- User -->
+  <section id="edit-User">
+    <div class="user container">
+      <div class="nav">
+        <h1 class="title">Edit User</h1>
+        <a href="./manageUsers.html" class="btn">Go Back</a>
       </div>
 
-      <div class="cart__total">
-        <div>
-          <h3>SUBTOTAL <span id="itemCount">(3)</span> Items</h3>
-          <p>$5,00,000</p>
-        </div>
-        <a href="./orderOverview.html" class="btn">Proceed to checkout</a>
+      <div class="edit-user">
+        <form class="edit-form">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" id="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select name="role" id="role" class="form-control">
+              <option value="user">user</option>
+              <option value="admin">admin</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">update</button>
+        </form>
       </div>
-
     </div>
-
   </section>
 
   <!-- Section Links -->
