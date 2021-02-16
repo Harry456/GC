@@ -215,9 +215,9 @@
 #security {
   margin-top: 5rem;
   .security-wrapper {
-    //display: flex;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 50%);
+    justify-content: center;
     grid-gap: 2rem;
     padding-bottom: 5rem;
     border-bottom: 1px solid color(border);
@@ -229,6 +229,7 @@
 
       .title {
         @include title(1rem, 0, 5rem);
+        text-align: center;
       }
 
       .security__form {
@@ -251,11 +252,6 @@
             display: block;
             padding: 1.25rem 0.25rem;
             border: none;
-
-            &:disabled {
-              cursor: not-allowed;
-              background: color(secondaryOverlay);
-            }
           }
         }
 
@@ -288,9 +284,8 @@
   @include Profile(3rem, 100%, $falsy, 60%, 80%, 1.5rem, $truthy);
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  @include Profile(3rem, 100%, $falsy, 50%, 80%, 1.75rem, $falsy);
+  @include Profile(3rem, 100%, $falsy, 50%, 80%, 1.75rem, $truthy);
 }
-
 @media (min-width: 992px) and (max-width: 1350px) {
   @include Profile(3.5rem, 75%, $falsy, 50%, 80%, 1.75rem, $falsy);
 }

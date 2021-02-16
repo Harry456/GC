@@ -947,9 +947,10 @@
     .security-wrapper {
       @if ($XSM) {
         grid-template-columns: repeat(1, 1fr);
-      } @else {
-        grid-template-columns: repeat(2, 1fr);
       }
+      //@else {
+      //   grid-template-columns: repeat(2, 1fr);
+      // }
 
       .security {
         .title {
@@ -1018,3 +1019,46 @@
     }
   }
 }
+//**---------------EditUser  Page Media Query END---------------------------**//
+
+//** Edit Shipping Address Page Media Query Start **//
+@mixin editShippingAddress($XSM) {
+  #edit-shipping-address {
+    .shipping-address-wrapper {
+      @if ($XSM) {
+        grid-template-columns: repeat(1, 90%);
+      }
+
+      .shipping-address {
+        .title {
+          @include title(1rem, 0, 3.5rem);
+        }
+      }
+    }
+  }
+}
+//**---------------Edit Shipping Address  Page Media Query END---------------------------**//
+
+//** MyOrderDetails Page Media Query Start **//
+@mixin myOrderDetails($XSM, $MD, $LG, $TFS) {
+  #order-Details {
+    margin-top: 10rem;
+    .order-details {
+      @include nav($TFS);
+      .ordered-products {
+        // Layout Split
+        @if ($XSM) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 2rem;
+        } @else if($MD) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        } @else if($LG) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
+}
+//**---------------MyOrderDetails  Page Media Query END---------------------------**//

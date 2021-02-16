@@ -100,11 +100,11 @@
         }
       }
       .btn {
-        @extend %btn;
+        @include form-btn(0);
         align-self: flex-end;
 
         &:hover {
-          @extend %btn_hover;
+          @extend %form-btn_hover;
         }
       }
     }

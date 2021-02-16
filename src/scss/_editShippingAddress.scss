@@ -1,0 +1,59 @@
+#edit-shipping-address {
+  margin-top: 12.5rem;
+
+  .shipping-address-wrapper {
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 50%);
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid color(border);
+    .shipping-address {
+      padding: 2rem;
+      box-shadow: 1px 1px 1px rgba(19, 19, 19, 0.5),
+        -1px -1px 1px rgba(19, 19, 19, 0.5);
+
+      .title {
+        @include title(1rem, 0, 5rem);
+        text-align: center;
+      }
+
+      &__form {
+        //border: 1px solid green;
+        margin: 1rem 0;
+
+        .form-group {
+          padding: 0.5rem 0;
+          text-transform: capitalize;
+
+          label {
+            display: inline-block;
+            padding: 0.5rem 0;
+            font-size: 2rem;
+            color: color(primary);
+          }
+          .form-control {
+            width: 100%;
+            display: block;
+            padding: 1.25rem 1rem;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+          }
+        }
+
+        .btn {
+          @include form-btn(0.5rem);
+
+          &:hover {
+            @extend %form-btn_hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 767.98px) {
+  @include editShippingAddress($truthy);
+}

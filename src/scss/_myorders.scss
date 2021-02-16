@@ -10,8 +10,10 @@
 
     //** Only if not order to show - Start  **//
     .no-order {
+      height: 50vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       &__text {
         @include title(2rem, 0, 3rem);

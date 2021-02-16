@@ -15,10 +15,12 @@
 @import 'auth';
 @import 'orderOverview';
 @import 'myorders';
+@import 'myOrderDetails';
 @import 'myprofile';
 @import 'admin';
 @import '_manageUsers';
 @import '_editUser';
+@import '_editShippingAddress';
 
 // menu-overlay
 .menu-overlay {
