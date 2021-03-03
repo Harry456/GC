@@ -664,14 +664,14 @@
       @include title(0.5rem, 0, 3rem);
     }
     .detail {
+      display: grid;
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: 700px 300px;
+      grid-template-rows: 250px 300px;
 
       &__img {
         margin-bottom: 2rem;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
-        border: 1px solid red;
       }
 
       &__content {

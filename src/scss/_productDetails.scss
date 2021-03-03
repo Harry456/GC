@@ -14,6 +14,7 @@
     grid-template-rows: repeat(1, 400px);
     grid-column-gap: 2rem;
     border-bottom: 1px solid color(border);
+    border: 1px solid red;
 
     &__img {
       //border: 5px solid red;
