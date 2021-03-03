@@ -665,12 +665,13 @@
     }
     .detail {
       grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 700px 300px;
 
       &__img {
         margin-bottom: 2rem;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, 350px);
         grid-gap: 1rem;
+        border: 1px solid red;
       }
 
       &__content {
@@ -868,7 +869,7 @@
 @mixin myorder($XSM, $MD, $LG) {
   #myorders {
     margin-top: 10rem;
-    .myorders {
+    .orders {
       .title {
         @include title(2.5rem, 0, 3rem);
       }
@@ -1062,3 +1063,134 @@
   }
 }
 //**---------------MyOrderDetails  Page Media Query END---------------------------**//
+
+//** ManageOrders Page Media Query Start **//
+@mixin manageorder($XSM, $MD, $LG) {
+  #manage-orders {
+    margin-top: 10rem;
+    .orders {
+      .title {
+        @include title(2.5rem, 0, 3rem);
+      }
+      .orderitems {
+        // Layout Split
+        @if ($XSM) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 2rem;
+        } @else if($MD) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        } @else if($LG) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
+}
+//**---------------ManageOrders  Page Media Query END---------------------------**//
+
+//** EditOrder Page Media Query Start **//
+@mixin editOrder($XSMsize, $FS, $flexDir, $alignItems) {
+  #order {
+    .order {
+      @if ($XSMsize) {
+        grid-template-columns: repeat(1, 1fr);
+      } @else {
+        grid-template-columns: 60% 40%;
+      }
+
+      .order-detail {
+        margin-top: 1rem;
+        .title {
+          @include title(1rem, 0, 2.75rem);
+        }
+
+        &__items {
+          &__item {
+            font-size: $FS;
+
+            ul {
+              flex-direction: $flexDir;
+              align-items: $alignItems;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//**---------------EditOrder Page Media Query END---------------------------**//
+
+//** ManageProducts Page Media Query Start **//
+@mixin manageProduct($XSM, $MD, $LG) {
+  #manage-products {
+    .products {
+      .all-products {
+        @if ($XSM) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-gap: 2rem;
+        } @else if($MD) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+        } @else if($LG) {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 2rem;
+        }
+      }
+    }
+  }
+}
+//**---------------ManageProducts Page Media Query END---------------------------**//
+
+//** CreateProduct Page Media Query Start **//
+@mixin createProduct($width) {
+  #create-product {
+    margin-top: 10.5rem;
+    .product {
+      .nav {
+        padding: 1.5rem 0;
+        .title {
+          @include title(1rem, 0, 2rem);
+        }
+      }
+      .create-product {
+        .create-product-form {
+          width: $width;
+        }
+      }
+    }
+  }
+}
+//**---------------CreateProduct Page Media Query END---------------------------**//
+
+//** EditProduct Page Media Query Start **//
+@mixin editProduct($width) {
+  #edit-product {
+    margin-top: 10.5rem;
+    .product {
+      .nav {
+        padding: 1.5rem 0;
+        .title {
+          @include title(1rem, 0, 2rem);
+        }
+      }
+      .edit-product {
+        &-form {
+          width: $width;
+        }
+      }
+    }
+  }
+}
+//**---------------Edit Page Media Query END---------------------------**//
+
+//** Loading Page Media Query Start **//
+@mixin loadingSM {
+  .loader-wrapper {
+    .loading {
+      padding: 2.5rem;
+    }
+  }
+}
+//**---------------Loading Page Media Query END---------------------------**//

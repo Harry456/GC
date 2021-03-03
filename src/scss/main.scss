@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import 'reset';
+@import 'media';
 @import 'utilities';
 @import 'jsClass';
-@import 'media';
 @import 'navbar';
 @import 'header';
 @import 'footer';
@@ -18,9 +18,14 @@
 @import 'myOrderDetails';
 @import 'myprofile';
 @import 'admin';
-@import '_manageUsers';
-@import '_editUser';
-@import '_editShippingAddress';
+@import 'manageUsers';
+@import 'editUser';
+@import 'manageOrders';
+@import 'editOrder';
+@import 'manageProducts';
+@import 'createProduct';
+@import 'editProduct';
+@import 'editShippingAddress';
 
 // menu-overlay
 .menu-overlay {

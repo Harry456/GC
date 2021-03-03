@@ -11,7 +11,6 @@
     &__details {
       padding: 2.5rem;
       display: grid;
-      //grid-template-columns: 20% repeat(2, 1fr);
       grid-template-columns: 50%;
       grid-template-rows: repeat(3, 300px);
       justify-content: center;
@@ -25,7 +24,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 40%;
+        width: 45%;
 
         box-shadow: 1px 1px 1px rgba(19, 19, 19, 0.5),
           -1px -1px 1px rgba(19, 19, 19, 0.5);
@@ -37,7 +36,7 @@
           img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 10%;
           }
         }
 
@@ -278,14 +277,14 @@
 // Media Queries
 
 @media (max-width: 575.98px) {
-  @include Profile(3rem, 100%, $truthy, 100%, 80%, 1.25rem, $truthy);
+  @include Profile(3rem, 100%, $truthy, 100%, 100%, 1.25rem, $truthy);
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
-  @include Profile(3rem, 100%, $falsy, 60%, 80%, 1.5rem, $truthy);
+  @include Profile(3rem, 100%, $falsy, 60%, 100%, 1.5rem, $truthy);
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
-  @include Profile(3rem, 100%, $falsy, 50%, 80%, 1.75rem, $truthy);
+  @include Profile(3rem, 100%, $falsy, 50%, 100%, 1.75rem, $truthy);
 }
 @media (min-width: 992px) and (max-width: 1350px) {
-  @include Profile(3.5rem, 75%, $falsy, 50%, 80%, 1.75rem, $falsy);
+  @include Profile(3.5rem, 75%, $falsy, 50%, 100%, 1.75rem, $falsy);
 }

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./scss/main.scss">
+  <script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin="anonymous"></script>
+  <title>Edit Order</title>
+</head>
+
+<body>
+  <nav id="navbar">
+    <div class="main-nav">
+
+      <div class="nav-logo">
+        <div class="brand">
+          <i class="fab fa-d-and-d fa-2x"></i>
+          <span class="brand__name">Gaming Cosmos</span>
+        </div>
+        <div class="menu-close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+
+
+      <ul class="navbar">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./products.html" class="nav-link">products</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html" class="nav-link">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link">contact</a>
+        </li>
+        <!-- Show Only if logged In -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="./myOrders.html" class="nav-link">my Orders</a>
+        </li>
+        <!-- Show only if user is admin -->
+        <li class="nav-item">
+          <a href="./admin.html" class="nav-link">admin</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">logout</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="menu-overlay"></div>
+
+  <!-- Section - Header -->
+  <header id="header">
+    <div class="navigation container">
+
+      <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      <div class="brand">
+        <i class="fab fa-d-and-d fa-2x"></i>
+        <span class="brand__name">Gaming Cosmos</span>
+      </div>
+
+      <div class="user-info">
+
+        <div class="user-info__wrapper user-info__wrapper--cart">
+          <p class="user-info__wrapper__cart__count">3</p>
+          <a href="./cart.html">
+            <i class="fas fa-cart-plus fa-2x"></i>
+            <!-- <span>Cart</span> -->
+          </a>
+        </div>
+
+        <div class="user-info__wrapper user-info__signin">
+          <!-- Show if Logged IN -->
+          <!-- <a href="#" class="">
+            									<i class="fas fa-user fa-2x"></i>
+            									<span>UserName</span>
+            								</a> -->
+          <a href="./login.html">
+            <i class="fas fa-user fa-2x"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Section - Single Order Detail -->
+  <section id="order">
+    <div class="order container">
+      <!-- Left Side -->
+      <div class="order-detail">
+        <div class="order-detail__shipping-address">
+          <h2 class="title">Shipping</h2>
+          <div class="address">
+            <span>Address</span>
+            <p>9876543210</p>
+            <p>
+              46 Omege Street,
+              Boston,
+            </p>
+            <p>Massachusetts,
+              456018,
+              USA</p>
+          </div>
+          <!-- <a href="./profile.html#security" class="btn">Edit Address</a> -->
+          <p class="btn">not delivered</p>
+        </div>
+        <!-- Left Side - Items -->
+        <div class="order-detail__items">
+          <h2 class="title">Order items</h2>
+          <!-- First Row -->
+          <div class="order-detail__items__item">
+            <div class="img-wrapper">
+              <img src="./img/products/MSI_GT76-2.JPG" alt="MSI_GT76-1">
+            </div>
+
+            <ul>
+              <li>MSI_GT76</li>
+              <li><span class="qty">1&nbsp; x</span>
+                <span class="price">&nbsp;1,80,000</span>
+              </li>
+              <li><span class="total"><i class="fas fa-rupee-sign"></i>&nbsp;1,80,000</span></li>
+            </ul>
+          </div>
+          <!-- Second Row -->
+          <div class="order-detail__items__item">
+            <div class="img-wrapper">
+              <img src="./img/products/MSI_GT76-2.JPG" alt="MSI_GT76-1">
+            </div>
+
+            <ul>
+              <li>MSI_GT76</li>
+              <li><span class="qty">1&nbsp; x</span>
+                <span class="price">&nbsp;1,80,000</span>
+              </li>
+              <li><span class="total"><i class="fas fa-rupee-sign"></i>&nbsp;1,80,000</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="order-total">
+        <div class="order-total__content">
+          <h3>order summary</h3>
+          <ul>
+            <li>
+              <span>items price</span>
+              <span><i class="fas fa-rupee-sign"></i>&nbsp;10,55,000</span>
+            </li>
+            <li>
+              <span>shipping price</span>
+              <span><i class="fas fa-rupee-sign"></i>&nbsp;0.00</span>
+            </li>
+            <li>
+              <span>total</span>
+              <span><i class="fas fa-rupee-sign"></i>&nbsp;10,55,000</span>
+            </li>
+          </ul>
+        </div>
+        <button class="btn">mark as delivered</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Links -->
+  <section id="links">
+    <div class="links container">
+
+      <ul>
+        <li>
+          <h3>About</h3>
+        </li>
+        <li><a href="#">123, Abc Street,Maintown, CA 12345-USA</a></li>
+        <li><a href="#">(111) 222 333 456</a></li>
+        <li><a href="#">cosmos@cosmos.com</a></li>
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Information</h3>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Delivery Information</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Extras</h3>
+        </li>
+        <li><a href="#">Gift</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">specials</a></li>
+        <li><a href="#">my account</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Customer Support</h3>
+        </li>
+        <li><a href="#">Help & support</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Order</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- Section - Footer -->
+  <footer>
+    <div class="footer-inner container">
+      <p>All Rights Reserved &copy; 2020 <span> <i class="fab fa-d-and-d"></i> Gaming Cosmos</span> </p>
+    </div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

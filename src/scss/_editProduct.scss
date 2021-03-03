@@ -1,0 +1,50 @@
+#edit-product {
+  margin-top: 8.5rem;
+
+  .product {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid color(border);
+    .nav {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        @include title(2.5rem, 0, 3.5rem);
+      }
+
+      .btn {
+        align-self: center;
+        @include btn(1.5rem, 3rem, 1.25rem, secondary);
+
+        &:hover {
+          @include btn_hover(primary);
+        }
+      }
+    }
+
+    .edit-product {
+      @include createAndEditProduct;
+    }
+  }
+}
+
+// Media Queries
+// XS
+@media (max-width: 575.98px) {
+  @include editProduct(100%);
+}
+
+// SM
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include editProduct(90%);
+}
+
+// MD
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include editProduct(80%);
+}
+
+// LG
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  @include editProduct(75%);
+}

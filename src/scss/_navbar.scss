@@ -5,7 +5,9 @@
   z-index: 5;
   width: 20%;
   height: 100vh;
-  background-color: rgba(238, 237, 237, 0.99);
+  // background-color: rgba(238, 237, 237, 0.99);
+  background-color: rgba(36, 36, 36, 1);
+
   // Nav Slide Out
   transform: translateX(-100%);
   transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -36,6 +38,7 @@
           align-self: center;
           font-size: 1.75rem;
           padding-right: 1rem;
+          color: color(secondary);
         }
       }
 
@@ -62,10 +65,11 @@
         font-size: 1.5rem;
         text-transform: capitalize;
         letter-spacing: 0.2rem;
+        color: color(primary);
       }
 
       &:hover {
-        background-color: color(secondaryOverlay);
+        background-color: color(primaryOverlay);
       }
       &--active {
         background-color: color(secondaryOverlay);
@@ -75,7 +79,7 @@
       }
 
       &:hover > .nav-link {
-        color: color(primary);
+        color: color(secondary);
       }
     }
   }

@@ -11,6 +11,7 @@
     padding-bottom: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 400px);
     grid-column-gap: 2rem;
     border-bottom: 1px solid color(border);
 

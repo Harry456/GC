@@ -1,0 +1,83 @@
+#manage-products {
+  margin-top: 8.5rem;
+  .products {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid color(border);
+
+    .nav {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        @include title(2.5rem, 0, 3.5rem);
+      }
+
+      .btn {
+        align-self: center;
+        @include btn(1.5rem, 3rem, 1.25rem, secondary);
+
+        &:hover {
+          @include btn_hover(primary);
+        }
+      }
+    }
+    .btn {
+      @include btn(1.5rem, 3rem, 1.25rem, secondary);
+
+      &:hover {
+        @include btn_hover(primary);
+      }
+    }
+
+    //** Only if not Product to show - Start  **//
+    .no-product {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &__text {
+        @include title(2rem, 0, 2.75rem);
+        color: color(primaryOverlay);
+      }
+      &__btn {
+        @extend %btn;
+        &:hover {
+          @extend %btn_hover;
+        }
+      }
+    }
+
+    .all-products {
+      padding: 1.5rem 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      .product {
+        @include userAndProductCardStyle;
+      }
+    }
+  }
+}
+
+// Media Queries
+// XS
+@media (max-width: 575.98px) {
+  @include manageProduct($truthy, $falsy, $falsy);
+}
+
+// SM
+@media (min-width: 576px) and (max-width: 767.98px) {
+  @include manageProduct($truthy, $falsy, $falsy);
+}
+
+// MD
+@media (min-width: 768px) and (max-width: 991.98px) {
+  @include manageProduct($falsy, $truthy, $falsy);
+}
+
+// LG - Slight adjustment made on Screen size - 1350.98px nomally it has to be 1199.98px
+@media (min-width: 992px) and (max-width: 1350.98px) {
+  @include manageProduct($falsy, $falsy, $truthy);
+}
