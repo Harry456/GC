@@ -1,1 +1,190 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="main.a825a9b1.css"><script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin></script><title>Login</title></head><body> <nav id="navbar"> <div class="main-nav"> <div class="nav-logo"> <div class="brand"> <i class="fa-2x fa-d-and-d fab"></i> <span class="brand__name">Gaming Cosmos</span> </div> <div class="menu-close"> <i class="fa-times fas"></i> </div> </div> <ul class="navbar"> <li class="nav-item"> <a href="index.html" class="nav-link">home</a> </li> <li class="nav-item"> <a href="products.html" class="nav-link">products</a> </li> <li class="nav-item"> <a href="about.html" class="nav-link">about</a> </li> <li class="nav-item"> <a href="contact.html" class="nav-link">contact</a> </li>  <li class="nav-item"> <a href="#" class="nav-link">profile</a> </li> <li class="nav-item"> <a href="myOrders.html" class="nav-link">my Orders</a> </li>  <li class="nav-item"> <a href="admin.html" class="nav-link">admin</a> </li> <li class="nav-item"> <a href="#" class="nav-link">logout</a> </li> </ul> </div> </nav> <div class="menu-overlay"></div>  <header id="header"> <div class="container navigation"> <div class="menu-btn"> <i class="fa-2x fa-bars fas"></i> </div> <div class="brand"> <i class="fa-2x fa-d-and-d fab"></i> <span class="brand__name">Gaming Cosmos</span> </div> <div class="user-info"> <div class="user-info__wrapper user-info__wrapper--cart"> <p class="user-info__wrapper__cart__count">3</p> <a href="#"> <i class="fa-2x fa-cart-plus fas"></i>  </a> </div> <div class="user-info__signin user-info__wrapper">   <a href="#"> <i class="fa-2x fa-user fas"></i> <span>Sign In</span> </a> </div> </div> </div> </header> <section id="login"> <div class="auth"> <div class="auth-wrapper"> <h2 class="auth__title">Sign In</h2> <form action="#" class="auth__form"> <div class="form-group"> <label for="username">UserName or Email</label> <input class="form-control" type="text" id="username" name="name" placeholder="Enter UserName"> </div> <div class="form-group"> <label for="password">Password</label> <input class="form-control" type="password" name="password" id="password" placeholder="Enter password"> </div> <p class="errorMsg">Invalid credentials</p> <button class="btn" type="submit">Login</button> </form> <div class="auth__msg"> <p> <span> Dont't have an Account? </span><a href="signup.html">SignUp</a></p> <p> <span></span><a href="forgotPassword.html">forgot password</a></p> </div> </div> </div> </section>  <section id="links"> <div class="container links"> <ul> <li> <h3>About</h3> </li> <li><a href="#">123, Abc Street,Maintown, CA 12345-USA</a></li> <li><a href="#">(111) 222 333 456</a></li> <li><a href="#">cosmos@cosmos.com</a></li> <li> <a href="#"> <i class="fa-facebook fab"></i> <i class="fa-instagram fab"></i> <i class="fa-twitter fab"></i> </a> </li> </ul> <ul> <li> <h3>Information</h3> </li> <li><a href="#">About Us</a></li> <li><a href="#">Delivery Information</a></li> <li><a href="#">Privacy Policy</a></li> <li><a href="#">Terms & Conditions</a></li> </ul> <ul> <li> <h3>Extras</h3> </li> <li><a href="#">Gift</a></li> <li><a href="#">Brands</a></li> <li><a href="#">specials</a></li> <li><a href="#">my account</a></li> </ul> <ul> <li> <h3>Customer Support</h3> </li> <li><a href="#">Help & support</a></li> <li><a href="#">FAQs</a></li> <li><a href="#">Shipping & Returns</a></li> <li><a href="#">Order</a></li> </ul> </div> </section>  <footer> <div class="container footer-inner"> <p>All Rights Reserved &copy; 2020 <span> <i class="fa-d-and-d fab"></i> Gaming Cosmos</span> </p> </div> </footer> <script src="js.636ca754.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.77bb5cfd.css">
+  <script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin="anonymous"></script>
+  <title>Login</title>
+<script src="/forgotPassword.js"></script></head>
+
+<body>
+
+  <nav id="navbar">
+    <div class="main-nav">
+
+      <div class="nav-logo">
+        <div class="brand">
+          <i class="fab fa-d-and-d fa-2x"></i>
+          <span class="brand__name">Gaming Cosmos</span>
+        </div>
+        <div class="menu-close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+
+
+      <ul class="navbar">
+        <li class="nav-item">
+          <a href="/index.html" class="nav-link">home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/products.html" class="nav-link">products</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link">contact</a>
+        </li>
+        <!-- Show Only if logged In -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/myOrders.html" class="nav-link">my Orders</a>
+        </li>
+        <!-- Show only if user is admin -->
+        <li class="nav-item">
+          <a href="/admin.html" class="nav-link">admin</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">logout</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="menu-overlay"></div>
+
+  <!-- Section - Header -->
+  <header id="header">
+    <div class="navigation container">
+
+      <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      <div class="brand">
+        <i class="fab fa-d-and-d fa-2x"></i>
+        <span class="brand__name">Gaming Cosmos</span>
+      </div>
+
+      <div class="user-info">
+
+        <div class="user-info__wrapper user-info__wrapper--cart">
+          <p class="user-info__wrapper__cart__count">3</p>
+          <a href="#">
+            <i class="fas fa-cart-plus fa-2x"></i>
+            <!-- <span>Cart</span> -->
+          </a>
+        </div>
+
+        <div class="user-info__wrapper user-info__signin">
+          <!-- Show if Logged IN -->
+          <!-- <a href="#" class="">
+    									<i class="fas fa-user fa-2x"></i>
+    									<span>UserName</span>
+    								</a> -->
+          <a href="#">
+            <i class="fas fa-user fa-2x"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="login">
+    <div class="auth">
+      <div class="auth-wrapper">
+        <h2 class="auth__title">Sign In</h2>
+        <form action="#" class="auth__form">
+
+          <div class="form-group">
+            <label for="username">UserName or Email</label>
+            <input class="form-control" type="text" id="username" name="name" placeholder="Enter UserName">
+
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="Enter password">
+          </div>
+          <p class="errorMsg">Invalid credentials</p>
+          <button class="btn" type="submit">Login</button>
+        </form>
+        <div class="auth__msg">
+          <p> <span> Dont't have an Account? </span><a href="/signup.html">SignUp</a></p>
+          <p> <span></span><a href="/forgotPassword.html">forgot password</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Links -->
+  <section id="links">
+    <div class="links container">
+
+      <ul>
+        <li>
+          <h3>About</h3>
+        </li>
+        <li><a href="#">123, Abc Street,Maintown, CA 12345-USA</a></li>
+        <li><a href="#">(111) 222 333 456</a></li>
+        <li><a href="#">cosmos@cosmos.com</a></li>
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Information</h3>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Delivery Information</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Extras</h3>
+        </li>
+        <li><a href="#">Gift</a></li>
+        <li><a href="#">Brands</a></li>
+        <li><a href="#">specials</a></li>
+        <li><a href="#">my account</a></li>
+      </ul>
+
+      <ul>
+        <li>
+          <h3>Customer Support</h3>
+        </li>
+        <li><a href="#">Help & support</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Order</a></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- Section - Footer -->
+  <footer>
+    <div class="footer-inner container">
+      <p>All Rights Reserved &copy; 2020 <span> <i class="fab fa-d-and-d"></i> Gaming Cosmos</span> </p>
+    </div>
+  </footer>
+
+  <script src="/js.00a46daa.js"></script>
+</body>
+
+</html>

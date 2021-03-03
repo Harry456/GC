@@ -1,1 +1,196 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="main.a825a9b1.css"><script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin></script><title>My Orders Details</title></head><body>  <nav id="navbar"> <div class="main-nav"> <div class="nav-logo"> <div class="brand"> <i class="fa-2x fa-d-and-d fab"></i> <span class="brand__name">Gaming Cosmos</span> </div> <div class="menu-close"> <i class="fa-times fas"></i> </div> </div> <ul class="navbar"> <li class="nav-item"> <a href="index.html" class="nav-link">home</a> </li> <li class="nav-item"> <a href="products.html" class="nav-link">products</a> </li> <li class="nav-item"> <a href="about.html" class="nav-link">about</a> </li> <li class="nav-item"> <a href="contact.html" class="nav-link">contact</a> </li>  <li class="nav-item"> <a href="profile.html" class="nav-link">profile</a> </li> <li class="nav-item"> <a href="myOrders.html" class="nav-link">my Orders</a> </li>  <li class="nav-item"> <a href="admin.html" class="nav-link">admin</a> </li> <li class="nav-item"> <a href="#" class="nav-link">logout</a> </li> </ul> </div> </nav> <div class="menu-overlay"></div>  <header id="header"> <div class="container navigation"> <div class="menu-btn"> <i class="fa-2x fa-bars fas"></i> </div> <div class="brand"> <i class="fa-2x fa-d-and-d fab"></i> <span class="brand__name">Gaming Cosmos</span> </div> <div class="user-info"> <div class="user-info__wrapper user-info__wrapper--cart"> <p class="user-info__wrapper__cart__count">3</p> <a href="cart.html"> <i class="fa-2x fa-cart-plus fas"></i> </a> </div> <div class="user-info__signin user-info__wrapper">   <a href="login.html"> <i class="fa-2x fa-user fas"></i> <span>Sign In</span> </a> </div> </div> </div> </header>  <section id="order-Details"> <div class="container order-details"> <div class="nav"> <h1 class="title">Order Details</h1> <a href="myOrders.html" class="btn">Go Back</a> </div> <div class="ordered-products"> <div class="ordered-products__item"> <li class="ordered-products__item__list ordered-products__item__list--product"> <span>Product:</span> <span>asus tuf a15</span> </li> <li class="ordered-products__item__list ordered-products__item__list--brand"> <span>brand:</span> <span>asus</span> </li> <li class="ordered-products__item__list ordered-products__item__list--price"> <span>price:</span> <span>Rs&nbsp;1,50,000</span> </li> <a href="productDetails.html" class="btn">View Product</a> </div> <div class="ordered-products__item"> <li class="ordered-products__item__list ordered-products__item__list--product"> <span>Product:</span> <span>asus tuf a15</span> </li> <li class="ordered-products__item__list ordered-products__item__list--brand"> <span>brand:</span> <span>asus</span> </li> <li class="ordered-products__item__list ordered-products__item__list--price"> <span>price:</span> <span>Rs&nbsp;1,50,000</span> </li> <a href="productDetails.html" class="btn">View Product</a> </div> <div class="ordered-products__item"> <li class="ordered-products__item__list ordered-products__item__list--product"> <span>Product:</span> <span>asus tuf a15</span> </li> <li class="ordered-products__item__list ordered-products__item__list--brand"> <span>brand:</span> <span>asus</span> </li> <li class="ordered-products__item__list ordered-products__item__list--price"> <span>price:</span> <span>Rs&nbsp;1,50,000</span> </li> <a href="productDetails.html" class="btn">View Product</a> </div> <div class="ordered-products__item"> <li class="ordered-products__item__list ordered-products__item__list--product"> <span>Product:</span> <span>asus tuf a15</span> </li> <li class="ordered-products__item__list ordered-products__item__list--brand"> <span>brand:</span> <span>asus</span> </li> <li class="ordered-products__item__list ordered-products__item__list--price"> <span>price:</span> <span>Rs&nbsp;1,50,000</span> </li> <a href="productDetails.html" class="btn">View Product</a> </div> <div class="ordered-products__item"> <li class="ordered-products__item__list ordered-products__item__list--product"> <span>Product:</span> <span>asus tuf a15</span> </li> <li class="ordered-products__item__list ordered-products__item__list--brand"> <span>brand:</span> <span>asus</span> </li> <li class="ordered-products__item__list ordered-products__item__list--price"> <span>price:</span> <span>Rs&nbsp;1,50,000</span> </li> <a href="productDetails.html" class="btn">View Product</a> </div> </div> </div> </section> <script src="js.636ca754.js"></script> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.77bb5cfd.css">
+  <script src="https://kit.fontawesome.com/6dfd115200.js" crossorigin="anonymous"></script>
+  <title>My Orders Details</title>
+</head>
+
+
+<body>
+  <!-- Section - Nav -->
+  <nav id="navbar">
+    <div class="main-nav">
+
+      <div class="nav-logo">
+        <div class="brand">
+          <i class="fab fa-d-and-d fa-2x"></i>
+          <span class="brand__name">Gaming Cosmos</span>
+        </div>
+        <div class="menu-close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+
+
+      <ul class="navbar">
+        <li class="nav-item">
+          <a href="/index.html" class="nav-link">home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/products.html" class="nav-link">products</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">about</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact.html" class="nav-link">contact</a>
+        </li>
+        <!-- Show Only if logged In -->
+        <li class="nav-item">
+          <a href="/profile.html" class="nav-link">profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/myOrders.html" class="nav-link">my Orders</a>
+        </li>
+        <!-- Show only if user is admin -->
+        <li class="nav-item">
+          <a href="/admin.html" class="nav-link">admin</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">logout</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="menu-overlay"></div>
+
+  <!-- Section - Header -->
+  <header id="header">
+    <div class="navigation container">
+
+      <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      <div class="brand">
+        <i class="fab fa-d-and-d fa-2x"></i>
+        <span class="brand__name">Gaming Cosmos</span>
+      </div>
+
+      <div class="user-info">
+
+        <div class="user-info__wrapper user-info__wrapper--cart">
+          <p class="user-info__wrapper__cart__count">3</p>
+          <a href="/cart.html">
+            <i class="fas fa-cart-plus fa-2x"></i>
+          </a>
+        </div>
+
+        <div class="user-info__wrapper user-info__signin">
+          <!-- Show if Logged IN -->
+          <!-- <a href="#" class="">
+    									<i class="fas fa-user fa-2x"></i>
+    									<span>UserName</span>
+    								</a> -->
+          <a href="/login.html">
+            <i class="fas fa-user fa-2x"></i>
+            <span>Sign In</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Section - Order Details -->
+  <section id="order-Details">
+    <div class="order-details container">
+      <div class="nav">
+        <h1 class="title">Order Details</h1>
+        <a href="/myOrders.html" class="btn">Go Back</a>
+      </div>
+
+
+      <div class="ordered-products">
+        <div class="ordered-products__item">
+          <li class="ordered-products__item__list ordered-products__item__list--product">
+            <span>Product:</span>
+            <span>asus tuf a15</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--brand">
+            <span>brand:</span>
+            <span>asus</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--price">
+            <span>price:</span>
+            <span>Rs&nbsp;1,50,000</span>
+          </li>
+          <a href="/productDetails.html" class="btn">View Product</a>
+        </div>
+
+        <div class="ordered-products__item">
+          <li class="ordered-products__item__list ordered-products__item__list--product">
+            <span>Product:</span>
+            <span>asus tuf a15</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--brand">
+            <span>brand:</span>
+            <span>asus</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--price">
+            <span>price:</span>
+            <span>Rs&nbsp;1,50,000</span>
+          </li>
+          <a href="/productDetails.html" class="btn">View Product</a>
+        </div>
+
+        <div class="ordered-products__item">
+          <li class="ordered-products__item__list ordered-products__item__list--product">
+            <span>Product:</span>
+            <span>asus tuf a15</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--brand">
+            <span>brand:</span>
+            <span>asus</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--price">
+            <span>price:</span>
+            <span>Rs&nbsp;1,50,000</span>
+          </li>
+          <a href="/productDetails.html" class="btn">View Product</a>
+        </div>
+
+        <div class="ordered-products__item">
+          <li class="ordered-products__item__list ordered-products__item__list--product">
+            <span>Product:</span>
+            <span>asus tuf a15</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--brand">
+            <span>brand:</span>
+            <span>asus</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--price">
+            <span>price:</span>
+            <span>Rs&nbsp;1,50,000</span>
+          </li>
+          <a href="/productDetails.html" class="btn">View Product</a>
+        </div>
+
+        <div class="ordered-products__item">
+          <li class="ordered-products__item__list ordered-products__item__list--product">
+            <span>Product:</span>
+            <span>asus tuf a15</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--brand">
+            <span>brand:</span>
+            <span>asus</span>
+          </li>
+          <li class="ordered-products__item__list ordered-products__item__list--price">
+            <span>price:</span>
+            <span>Rs&nbsp;1,50,000</span>
+          </li>
+          <a href="/productDetails.html" class="btn">View Product</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js.00a46daa.js"></script>
+</body>
+
+</html>
